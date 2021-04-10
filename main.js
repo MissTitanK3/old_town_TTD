@@ -5,7 +5,7 @@ import express from "express";
 // import registerRoutes from "./routes";
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5678;
 
 
 async function startServer() {

@@ -4,6 +4,7 @@ import ForOhFour from './view/NotFound'
 
 import './App.css';
 import TopNav from './controller/nav-control/TopNav';
+import FooterNav from './controller/nav-control/FooterNav';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='*' component={ForOhFour} />
       </Switch>
+      <FooterNav />
     </div>
   );
 }

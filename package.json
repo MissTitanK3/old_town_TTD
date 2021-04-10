@@ -1,0 +1,32 @@
+{
+  "name": "old_town_ttd",
+  "version": "1.0.0",
+  "description": "TTD",
+  "main": "index.js",
+  "module": "main.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "nodemon index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MissTitanK3/old_town_TTD.git"
+  },
+  "author": "Tianna McCoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MissTitanK3/old_town_TTD/issues"
+  },
+  "homepage": "https://github.com/MissTitanK3/old_town_TTD#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "concurrently": "^6.0.1",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

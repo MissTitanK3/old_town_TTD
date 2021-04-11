@@ -1,6 +1,6 @@
 import React from 'react'
-import { LogoWrap, NavList, TopBar } from '../../style/Components'
-import { MobileWrap, TopNavWrap } from '../../style/Wrapper'
+import { NavList, TopBar } from '../../style/Components'
+import { LogoWrap, MobileWrap, TopNavWrap } from '../../style/Wrapper'
 import LogoImg from '../../asset/img/OTLogo.png'
 import { Link } from 'react-router-dom'
 import Search from '../Search'
@@ -10,10 +10,11 @@ export default function TopNav() {
   return (
     <div>
       <TopBar />
-
       <TopNavWrap>
         <LogoWrap>
-          <img src={LogoImg} alt="Olde Town Logo" />
+          <Link to='/'>
+            <img src={LogoImg} alt="Olde Town Logo" />
+          </Link>
         </LogoWrap>
         <NavList>
           <div>
@@ -42,7 +43,7 @@ export default function TopNav() {
               </Link>
             </li>
             <li>
-              <Link to='/contact-us'>
+              <Link to='/contact'>
                 Contact Us
               </Link>
             </li>

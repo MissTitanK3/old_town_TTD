@@ -10,6 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { DrawerWrap } from '../style/Wrapper';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -49,10 +50,13 @@ export default function TemporaryDrawer() {
     >
       <div className='exit' onClick={toggleDrawer(anchor, false)}><CloseIcon /></div>
       <List>
-        {['', 'About', 'Events', 'Directory', 'News', 'Contact Us'].map((text, index) => (
+        {['About', 'Events', 'Directory', 'News', 'Contact'].map((text, index) => (
           <>
             <ListItem button key={text}>
-              <ListItemText primary={text} />
+              {/* TODO figure out how to remove the underline */}
+              <Link to={'/' + text.toLowerCase()}>
+                <ListItemText primary={text} />
+              </Link>
             </ListItem>
             <Divider />
           </>
@@ -63,14 +67,12 @@ export default function TemporaryDrawer() {
 
   return (
     <DrawerWrap>
-      {['right'].map((anchor) => (
-        <React.Fragment key={'right'}>
-          <Button className='NoBack' onClick={toggleDrawer(anchor, true)}><MenuIcon fontSize='large' color='disabled' /></Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
-      ))}
+      <React.Fragment key={'right'}>
+        <Button className='NoBack' onClick={toggleDrawer('right', true)}><MenuIcon fontSize='large' color='disabled' /></Button>
+        <Drawer anchor='right' open={state['right']} onClose={toggleDrawer('right', false)}>
+          {list('right')}
+        </Drawer>
+      </React.Fragment>
     </DrawerWrap>
   );
 }

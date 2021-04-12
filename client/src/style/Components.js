@@ -57,6 +57,30 @@ export const StandardBtn = styled.div`
     cursor: pointer;
   }
 `
+export const AltBtn = styled.div`
+border: none;
+display: flex;
+justify-content: center;
+flex-direction: row;
+align-items: center;
+background-color: #333333;
+color: #ffffff;
+width: 150px;
+height: 40px;
+&:hover {
+  color: #AD976E;
+  cursor: pointer;
+}
+@media only screen and (min-width: 884px) {
+
+height: 50px;
+width: 160px;
+font-size: 1.5em;
+position: relative;
+left: 140px;
+bottom: -3px;
+}
+`
 
 export const OhNo = styled.div`
 display: flex;
@@ -72,5 +96,85 @@ h1 {
   font-size: 200px;
 }
 height: 70vh;
+}
+`
+
+export const VideoComp = styled.div`
+background-color: #E97924;
+padding: 20px 0;
+div {
+  margin: auto;
+}
+`
+
+export const StandDesc = styled.div`
+margin: auto;
+text-align: center;
+color: #333333;
+padding: 25px;
+h2 {
+  color: #3C4981;
+}
+@media only screen and (min-width: 884px) {
+width: 50vw;
+font-size: 35px;
+h2 {
+  font-size: 75px;
+}
+}
+`
+export const AbsCard = styled.div`
+display: flex;
+justify-content: center;
+flex-direction: column;
+position: relative;
+text-align: center;
+margin: auto;
+padding-bottom: 15px;
+a {
+  text-decoration: none;
+}
+@media only screen and (min-width: 884px) {
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 425px;
+height: 750px;
+position: sticky;
+margin: 15px;
+span {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding:0 0 10px 10px;
+  text-align: right;
+  width: 95%;
+  height: 90%;
+  font-size: 2.5em;
+}
+a {
+  text-decoration: none;
+}
+}
+`
+export const CardBar = styled.div`
+width: 100vw;
+height: 200px;
+margin-top: 350px;
+@media only screen and (min-width: 884px) {
+background-color: #83CFCB;
+}
+`
+export const PageBreak = styled.div`
+img {
+width: 100vw;
+}
+@media only screen and (min-width: 884px) {
+img {
+height: 101%;
+width: 100vw;
+position: relative;
+top: -300px;
+}
 }
 `

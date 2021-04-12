@@ -124,6 +124,7 @@ text-align: left;
 h2 {
   margin-left: 45px;
 }
+}
 `
 
 export const SocialWrap = styled.div`
@@ -181,4 +182,134 @@ height: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
+`
+export const AbsCardWrap = styled.div`
+display: flex;
+justify-content: center;
+flex-direction: column;
+position: relative;
+top: -550px;
+text-align: center;
+margin: auto;
+img {
+  width: 275px;
+}
+
+.aqua {
+  height: 70%;
+  width: 275px;
+  background-color: #55C4CA;
+}
+.moa {
+  height: 70%;
+  width: 275px;
+  background-color: #E7B22D;
+  box-shadow: .01px .01px 5px black;
+}
+.lime {
+  height: 70%;
+  width: 275px;
+  background-color: #CBE18C;
+  box-shadow: .01px .01px 5px black;
+}
+.aBlue {
+  background-color: #313A64;
+  height: 275px;
+  width: 5%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.aRed {
+  background-color: #F40707;
+  height: 275px;
+  width: 5%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.aGreen {
+  background-color: #048A81;
+  height: 275px;
+  width: 5%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+@media only screen and (min-width: 884px) {
+display: flex;
+justify-content: center;
+/* flex-wrap: wrap; */
+flex-direction: row;
+position: relative;
+top: -400px;
+text-align: center;
+align-items: center;
+img {
+  width: 70%;
+  align-self: center;
+}
+
+.aqua {
+  background-color: #55C4CA;
+  margin: auto;
+  height: 380px;
+  width: 75%;
+  position: relative;
+  top: -170px;
+  z-index: -10;
+  box-shadow: .01px .01px 5px black;
+}
+.moa {
+  background-color: #E7B22D;
+  margin: auto;
+  height: 380px;
+  width: 75%;
+  position: relative;
+  top: -170px;
+  z-index: -10;
+  box-shadow: .01px .01px 5px black;
+}
+.lime {
+  background-color: #CBE18C;
+  margin: auto;
+  height: 380px;
+  width: 75%;
+  position: relative;
+  top: -170px;
+  z-index: -10;
+  box-shadow: .01px .01px 5px black;
+}
+.aBlue {
+  background-color: #313A64;
+  height: 58%;
+  width: 50%;
+  clip-path: polygon(7% 0, 7% 95%, 100% 95%, 100% 100%, 0 100%, 0 0);
+  position: relative;
+  top: -235px;
+  left: -6px;
+  z-index: -20;
+}
+.aRed {
+  background-color: #F40707;
+  height: 58%;
+  width: 50%;
+  clip-path: polygon(7% 0, 7% 95%, 100% 95%, 100% 100%, 0 100%, 0 0);
+  position: relative;
+  top: -235px;
+  left: -6px;
+  z-index: -20;
+}
+.aGreen {
+  background-color: #048A81;
+  height: 58%;
+  width: 50%;
+  clip-path: polygon(7% 0, 7% 95%, 100% 95%, 100% 100%, 0 100%, 0 0);
+  position: relative;
+  top: -235px;
+  left: -6px;
+  z-index: -20;
+}
+}
 `

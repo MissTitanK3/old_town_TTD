@@ -50,19 +50,18 @@ export default function TemporaryDrawer() {
     >
       <div className='exit' onClick={toggleDrawer(anchor, false)}><CloseIcon /></div>
       <List>
-        {['About', 'Events', 'Directory', 'News', 'Contact'].map((text, index) => (
-          <>
-            <ListItem button key={text}>
-              {/* TODO figure out how to remove the underline */}
-              <Link to={'/' + text.toLowerCase()}>
-                <ListItemText primary={text} />
-              </Link>
-            </ListItem>
+        {['About', 'Events', 'Directory', 'News', 'Contact'].map((text, x) => (
+          < ListItem button key={x} >
+            {/* TODO figure out how to remove the underline */}
+            <Link to={'/' + text.toLowerCase()} >
+              <ListItemText primary={text} />
+            </Link>
             <Divider />
-          </>
-        ))}
-      </List>
-    </DrawerWrap>
+          </ListItem>
+        ))
+        }
+      </List >
+    </DrawerWrap >
   );
 
   return (

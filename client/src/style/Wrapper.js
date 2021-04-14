@@ -47,19 +47,20 @@ background-color: #048A81;
   /* TODO When changing background, update this */
   background-color: slategrey;
 }
-ul {
-  text-decoration: none;
-  li {
-    a {
-    }
-    }
-  }
 
+}
+
+div {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
 }
 span {
   text-align: center;
   font-size: 2em;
   color: #ffffff;
+}
+
 }
 `
 
@@ -312,4 +313,69 @@ img {
   z-index: -20;
 }
 }
+`
+
+export const WhatsNewWrapper = styled.div`
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+margin: 15px;
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.dLeft {
+  display: none;
+}
+.dRight {
+  width: 80vw;
+  height: 280px;
+  border: 10px solid #3C4981;
+  background-color: white;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  background-color: #3C4981;
+  width: 350px;
+  height: 150px;
+  color: white;
+  font-size: 3.5em;
+  padding: 15px 0 0 50px;
+  margin: 50px 0 0 -50px;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 884px) {
+.dRight {
+  width: 280px;
+  height: 280px;
+  border: 10px solid #3C4981;
+  background-color: white;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dLeft {
+  display: initial;
+  width: 500px;
+  height: 300px;
+  background-color: #E7C57F;
+  margin: 15px;
+}
+}
+`
+
+export const LongWrapper = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin: 100px 0 100px 0;
+
 `

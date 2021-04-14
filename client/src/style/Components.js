@@ -178,3 +178,85 @@ top: -300px;
 }
 }
 `
+
+export const LCard = styled.div`
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+margin: auto;
+div {
+  color: white;
+  img {
+    opacity: .7;
+    width: 100vw;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    height: 70px;
+    width: 90vw;
+    font-size: 45px;
+  }
+  h3 {
+    text-align: right;
+    height: 100px;
+    width: 90vw;
+  }
+}
+.midOrange {
+  background-color: #E97924;
+  margin-top: -5px;
+}
+.midBlue {
+  background-color: #313A64;
+  margin-top: -5px;
+}
+.midAqua {
+  background-color: #378CAB;
+  margin-top: -5px;
+}
+.green {
+  background-color:#048A81;
+}
+.red {
+  background-color:#F40707;
+}
+.blue {
+  background-color:#313A64;
+}
+
+
+@media only screen and (min-width: 884px) {
+display: flex;
+flex-direction: row;
+margin: auto;
+height: 800px;
+width: 400px;
+margin: 25px;
+div {
+  img {
+    width: 400px;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    height: 200px;
+    width: 300px;
+    font-size: 85px;
+    font-weight: 200;
+    padding-left: 100px;
+  }
+  h3 {
+    width: 93%;
+    padding: 15px;
+    font-size: 35px;
+  }
+}
+}
+`

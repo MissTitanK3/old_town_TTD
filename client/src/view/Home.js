@@ -2,9 +2,12 @@ import React from 'react'
 import ReactPlayer from 'react-player/lazy'
 import AbstractCard from '../model/AbstractCard'
 import { CardBar, PageBreak, StandDesc, VideoComp } from '../style/Components'
-import { AbsCardWrap } from '../style/Wrapper'
+import { AbsCardWrap, LongWrapper, WhatsNewWrapper } from '../style/Wrapper'
 import chalkboard from '../asset/img/chalkboard.png'
 import PageBreakOne from '../asset/img/page_break_one.png'
+import OutsideArea from '../asset/img/outside_sitting.png'
+import LongCard from '../model/LongCard'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -54,12 +57,42 @@ export default function Home() {
       <PageBreak>
         <img src={PageBreakOne} alt="" />
       </PageBreak>
-      <div>
-        whats new
-      </div>
-      <div>
-        cards
-      </div>
+      <WhatsNewWrapper>
+        <div className='dLeft' >
+          <h3>What's <br /> New?</h3>
+        </div>
+        <Link to='/'>
+          <div className='dRight' >
+            <p>COVID-19 UPDATES</p>
+          </div>
+        </Link>
+      </WhatsNewWrapper>
+      <LongWrapper>
+        <LongCard
+          img={OutsideArea}
+          alt='Outside sitting area'
+          labeled='SHOP'
+          details="Olde Town offeres one of the Colorado's most unique shopping experiences!"
+          accent='green'
+          mid='midOrange'
+        />
+        <LongCard
+          img={OutsideArea}
+          alt='Outside sitting area'
+          labeled='DINE'
+          details="Olde Town offeres one of the Colorado's most unique shopping experiences!"
+          accent='red'
+          mid='midBlue'
+        />
+        <LongCard
+          img={OutsideArea}
+          alt='Outside sitting area'
+          labeled='MORE'
+          details="Olde Town offeres one of the Colorado's most unique shopping experiences!"
+          accent='blue'
+          mid='midAqua'
+        />
+      </LongWrapper>
       <div>
         latest
       </div>

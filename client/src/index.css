@@ -1,27 +1,26 @@
 @font-face {
-	font-family: 'Neutraface Light';
-	src: url('./assets/fonts/NeutrafaceDisplay-Light.otf');
+  font-family: 'Neutraface Light';
+  src: url('./assets/fonts/NeutrafaceDisplay-Light.otf');
 }
 @font-face {
-	font-family: 'Neutraface Bold';
-	src: url('./assets/fonts/NeutrafaceDisplay-Bold.otf');
+  font-family: 'Neutraface Bold';
+  src: url('./assets/fonts/NeutrafaceDisplay-Bold.otf');
 }
 @font-face {
-	font-family: 'Neutraface Medium';
-	src: url('./assets/fonts/NeutrafaceDisplay-Medium.otf');
+  font-family: 'Neutraface Medium';
+  src: url('./assets/fonts/NeutrafaceDisplay-Medium.otf');
 }
 
 body {
-	margin: 0;
-	font-family: 'Neutraface Light', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: 'Neutraface Light', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
-=======
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
 @import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
 
 body {

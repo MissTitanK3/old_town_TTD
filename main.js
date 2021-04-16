@@ -1,11 +1,12 @@
 import compression from "compression";
 import cors from "cors";
 import express from "express";
+const path = require('path')
 // import connectDB from "./config/db";
 // import registerRoutes from "./routes";
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5678;
 
 
 async function startServer() {
@@ -15,8 +16,8 @@ async function startServer() {
   //Middleware
   app.use(cors())
   app.use(compression())
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: false }))
+  app.use(express.json({ extended: false }));
+  app.use(express.urlencoded({ extended: true }))
 
   //Home
   app.get("/", (req, res) => {

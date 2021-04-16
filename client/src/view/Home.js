@@ -92,10 +92,8 @@ export default function Home() {
           accent='blue'
           mid='midAqua'
         />
-      </LongWrapper>
-      <div>
-        latest
-      </div>
+      </LongWrapper>'
+      {/* TODO add instafeed */}
     </div>
   )
 }

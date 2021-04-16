@@ -54,6 +54,7 @@ export default function TopNav() {
       </TopNavWrap>
       <MobileWrap>
         <LogoWrap>
+          {/* Add link here for mobile home */}
           <img src={LogoImg} alt="Olde Town Logo" />
         </LogoWrap>
         <DrawerNav />

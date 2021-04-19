@@ -15,6 +15,7 @@ import ForOhFour from './view/NotFound'
 import './App.css';
 import TopNav from './controller/nav-control/TopNav';
 import FooterNav from './controller/nav-control/FooterNav';
+import BuisnessCard from './model/BuisnessCard';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
         <Route path='/events' component={Events} />
+        <Route path='/directory/businesscard' component={BuisnessCard} />
         <Route path='/directory' component={Directory} />
         <Route path='/news' component={News} />
         <Route path='/contact' component={ContactUs} />

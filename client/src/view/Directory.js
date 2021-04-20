@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import axios from 'axios'
 import { useWPDataStore } from '../api/store'
 import { Link } from 'react-router-dom';
+import MapBox from '../api/MapBox';
 
 export default function Directory() {
   const [filtered, setFiltered] = useState('all')
@@ -85,7 +86,7 @@ export default function Directory() {
           filteredResults(WPData, 25)
           : null
       }
-      {/* TODO get googlemap api key */}
+      <MapBox />
     </>
   )
 }

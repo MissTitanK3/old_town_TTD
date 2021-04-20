@@ -47,6 +47,11 @@ export default function TopNav() {
                 Contact Us
               </Link>
             </li>
+            <li>
+              <Link to='/directory/businesscard'>
+                business card
+              </Link>
+            </li>
           </ul>
           <div>
           </div>

@@ -63,7 +63,11 @@ export default function FooterNav() {
       </SocialWrap>
       <CWrap>
         <span>
-          C 2021 for Olde Town Arvada by T-Time Design
+          <p>
+            C 2021 for Olde Town Arvada by T-Time Design
+            <a href='https://www.mapbox.com/about/maps/' target='_blank'>     Maps &copy; Mapbox &copy; OpenStreetMap</a>
+          </p>
+
         </span>
       </CWrap>
     </div>

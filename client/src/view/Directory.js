@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useQuery } from "react-query";
 import axios from 'axios'
 import { useWPDataStore } from '../api/store'
+import { Link } from 'react-router-dom';
+import MapBox from '../api/MapBox';
 
 export default function Directory() {
   const [filtered, setFiltered] = useState('all')
@@ -30,10 +32,13 @@ export default function Directory() {
   }
 
   function results(data) {
-    return data.map(bus => (
-      <h3 key={bus.id}>{bus.title.rendered}</h3>
-    )
-    )
+    try {
+      return data.map((bus, index) => (
+        <Link to={`/directory/${index}`} key={bus.id} > { bus.title.rendered} <br /> </Link >
+      ))
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
@@ -45,6 +50,7 @@ export default function Directory() {
       <button onClick={() => setFiltered('services')} >Services</button>
       <button onClick={() => setFiltered('orgs')} >Organization</button>
       <button onClick={() => setFiltered('parking')} >Parking</button>
+      <hr />
       {
         filtered === 'all' ?
           results(WPData)
@@ -80,7 +86,7 @@ export default function Directory() {
           filteredResults(WPData, 25)
           : null
       }
-      {/* TODO get googlemap api key */}
+      <MapBox />
     </>
   )
 }

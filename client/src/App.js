@@ -27,7 +27,11 @@ function App() {
       <TopNav />
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route path='/directory/:id' component={BuisnessCard} />
+        <Route path='/directory' component={Directory} />
         <Route path='/news' component={News} />
+        <Route path='/about' component={About} />
+        <Route path='/events' component={Events} />
         <Route path='/contact' component={ContactUs} />
         <Route path='/covid19' component={Covid19} />
         <Route path='/shop' component={Shop} />

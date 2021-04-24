@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Neutraface Light';
-  src: url('./assets/fonts/NeutrafaceDisplay-Light.otf');
+  src: url('./asset/fonts/NeutrafaceDisplay-Light.otf');
 }
 @font-face {
   font-family: 'Neutraface Bold';
-  src: url('./assets/fonts/NeutrafaceDisplay-Bold.otf');
+  src: url('./asset/fonts/NeutrafaceDisplay-Bold.otf');
 }
 @font-face {
   font-family: 'Neutraface Medium';
-  src: url('./assets/fonts/NeutrafaceDisplay-Medium.otf');
+  src: url('./asset/fonts/NeutrafaceDisplay-Medium.otf');
 }
 
 body {

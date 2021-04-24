@@ -15,7 +15,14 @@ export default function Home() {
       {/* TODO Issue with side scroll */}
       <VideoComp>
         {/* TODO update this for selected video */}
-        <ReactPlayer width='100vw' height='95vh' url='https://www.youtube.com/watch?v=iy8D7XaxmIM' />
+        <ReactPlayer
+          width='100vw'
+          height='95vh'
+          url='https://www.youtube.com/watch?v=iy8D7XaxmIM'
+          config={{
+            controls: false
+          }}
+        />
       </VideoComp>
       <StandDesc>
         <h2>Olde Town Arvada, Colorado</h2>

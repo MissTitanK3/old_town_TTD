@@ -26,7 +26,7 @@ export default function Home() {
       </VideoComp>
       <StandDesc>
         <h2>Olde Town Arvada, Colorado</h2>
-        <p>Olde Town is the city's downtown district, with a turn-of-the-century Main Street Americana ambiance. It is the heart and soul of Arvada and has become a destination for the locals and visitors, alike. With a diverse array of shops, boutiques, galleries, events, restaurants, breweries and a winery, Olde Town has something for everyone.</p>
+        <p>Located only 20 minutes from downtown Denver, Olde Town is Arvada's historic downtown! With a diverse array of shops, boutiques, galleries, events, restaurants, breweries and a winery, Olde Town has something for everyone. Easily accessible from I70 or the RTD G Line, it is the heart and soul of the City and has become a destination for locals and visitors alike. And now, with new pedestrian-friendly street closures, additional outdoor seating and a plethora of public art, there are more reasons than ever to come spend a day (or two) in Olde Town!</p>
       </StandDesc>
       <div>
         <CardBar />

@@ -3,6 +3,9 @@ import { useWPDataStore } from '../api/store'
 import shallow from 'zustand/shallow'
 import { useParams } from 'react-router-dom'
 import MapBox from '../api/MapBox'
+import DefaultImg from '../asset/img/OTLogo.png'
+
+import '../App.css'
 
 export default function BuisnessCard() {
   const { id } = useParams()
@@ -25,7 +28,8 @@ export default function BuisnessCard() {
       <div dangerouslySetInnerHTML={{ __html: WPData?.acf.youtube ? WPData.acf.youtube : updateDB }} />
       <div dangerouslySetInnerHTML={{ __html: WPData?.excerpt.rendered ? WPData.excerpt.rendered : updateDB }} />
       <div dangerouslySetInnerHTML={{ __html: WPData?.excerpt.rendered ? WPData.excerpt.rendered : updateDB }} />
-      <img src={WPData?.acf.images.sizes.large} alt={WPData?.acf.images.filename} />
+
+      <img src={WPData?.acf.images?.sizes.large ? WPData?.acf.images?.sizes.large : DefaultImg} alt={WPData?.acf.images?.filename ? WPData?.acf.images.filename : 'File Doesnt Exist'} />
       <MapBox />
     </div >
   )

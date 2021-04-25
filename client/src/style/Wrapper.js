@@ -184,6 +184,35 @@ display: flex;
 justify-content: center;
 align-items: center;
 `
+export const AbsTitleWrap = styled.div`
+background-color: #378CAB;
+font-size: 1.9rem;
+font-weight: 900;
+height: 75px;
+width: 450px;
+display: flex;
+align-items: center;
+padding-left: 50px;
+position: relative;
+z-index:0;
+margin: 35px 0;
+span {
+  width: 100%;
+}
+.aRed {
+  background-color: #313A64;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  position: absolute;
+  top: 5px;
+  left: 205px;
+  z-index: -20;
+}
+
+`
+
 export const AbsCardWrap = styled.div`
 display: flex;
 justify-content: center;
@@ -377,5 +406,18 @@ justify-content: center;
 align-items: center;
 flex-wrap: wrap;
 margin: 100px 0 100px 0;
+`
 
+export const BCardWrapper = styled.div`
+width: 100vw;
+display: flex;
+flex-direction: column;
+`
+
+export const BDetailsWrap = styled.div`
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+font-size: 1.55em;
+font-weight: 700;
 `

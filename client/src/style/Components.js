@@ -260,3 +260,54 @@ div {
 }
 }
 `
+
+export const BusinessLogo = styled.img`
+width: 400px;
+height: 400px;
+
+`
+
+export const PageBreakAlt = styled.div`
+img {
+width: 100vw;
+}
+@media only screen and (min-width: 884px) {
+img {
+height: 101%;
+width: 100vw;
+}
+}
+`
+
+export const Hours = styled.div`
+width: 200px;
+`
+
+export const Excerpt = styled.div`
+margin: auto;
+width: 75%;
+font-size: 34px;
+font-weight: 900;
+`
+
+export const BusSocials = styled.div`
+display: flex;
+margin: auto;
+align-items: center;
+justify-content: center;
+font-size: 25px;
+a {
+  display: flex;
+  margin: 100px 0;
+  padding: 0 10px;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  :hover {
+    color: #E97924;
+  }
+}
+img {
+  width: 55px;
+}
+`

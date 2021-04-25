@@ -7,8 +7,6 @@
   position: relative;
   top: 0;
   bottom: 0;
-  width: 900px;
-  height: 500px;
   margin: auto;
 }
 
@@ -24,3 +22,19 @@
   padding: 6px;
   font-weight: bold;
 } */
+
+.markers h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: absolute;
+  border: none;
+  border-radius: 30%;
+  cursor: pointer;
+  padding: 0;
+  height: 60px;
+  width: 100px;
+  font-size: small;
+  color: pink;
+  background-color: black;
+}

@@ -1,8 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// Stylesheet
 import { NavList, TopBar } from '../../style/Components'
 import { LogoWrap, MobileWrap, TopNavWrap } from '../../style/Wrapper'
+
+// Assets
 import LogoImg from '../../asset/img/OTLogo.png'
-import { Link } from 'react-router-dom'
 import Search from '../Search'
 import DrawerNav from '../DrawerNav'
 

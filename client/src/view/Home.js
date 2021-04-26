@@ -1,13 +1,17 @@
 import React from 'react'
 import ReactPlayer from 'react-player/lazy'
+import { Link } from 'react-router-dom'
+
+// Assets
 import AbstractCard from '../model/AbstractCard'
-import { CardBar, PageBreak, StandDesc, VideoComp } from '../style/Components'
-import { AbsCardWrap, LongWrapper, WhatsNewWrapper } from '../style/Wrapper'
 import chalkboard from '../asset/img/chalkboard.png'
 import PageBreakOne from '../asset/img/page_break_one.png'
 import OutsideArea from '../asset/img/outside_sitting.png'
 import LongCard from '../model/LongCard'
-import { Link } from 'react-router-dom'
+
+// Stylesheet
+import { AbsCardWrap, LongWrapper, WhatsNewWrapper } from '../style/Wrapper'
+import { CardBar, PageBreak, StandDesc, VideoComp } from '../style/Components'
 
 export default function Home() {
   return (

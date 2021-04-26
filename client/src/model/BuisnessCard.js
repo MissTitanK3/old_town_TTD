@@ -1,9 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import '../App.css'
-// MapBox
+
+// Data
 import MapBox from '../api/MapBox'
-// Zustand
 import { useWPDataStore } from '../api/store'
 import shallow from 'zustand/shallow'
 
@@ -13,10 +12,12 @@ import ANCHOR from '../asset/img/anchorfm.png'
 import INSTA from '../asset/img/insta.png'
 import TWIT from '../asset/img/twitter.png'
 import YT from '../asset/img/youtube.png'
-
 // import PINS from '../asset/img/pinterest.png'
 import DefaultImg from '../asset/img/OTLogo.png'
 import PageBreakOne from '../asset/img/page_break_one.png'
+
+// Stylesheet
+import '../App.css'
 import { BCardWrapper, BDetailsWrap } from '../style/Wrapper'
 import { BusinessLogo, BusSocials, Excerpt, Hours, PageBreakAlt } from '../style/Components'
 

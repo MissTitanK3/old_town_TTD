@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import ReactMapGl, { Marker } from 'react-map-gl'
+
+// Assets
 import RoomIcon from '@material-ui/icons/Room';
 
+// Stylesheet
 import './Map.css'
 
+// Access Token
 const token = 'pk.eyJ1Ijoib2xkZXRvd25kZXYiLCJhIjoiY2tucGVpemN6MDF3bTJ2cXAwcWN6ajN0MCJ9.xuXc-tBveJGQ3te0rLZb_A'
 
 

@@ -368,7 +368,7 @@ background-color: #378CAB;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #378CAB;
+  background-color: #378CABA8;
   :hover{
     color: white;
     cursor: pointer;
@@ -381,7 +381,7 @@ background-color: #378CAB;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #E7C57F;
+  background-color: #E7C57FA8;
   :hover{
     color: white;
     cursor: pointer;
@@ -394,7 +394,7 @@ background-color: #378CAB;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #048A81;
+  background-color: #048A81A8;
   :hover{
     color: white;
     cursor: pointer;
@@ -407,7 +407,7 @@ background-color: #378CAB;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #F40707;
+  background-color: #F40707A8;
   :hover{
     color: white;
     cursor: pointer;
@@ -420,7 +420,7 @@ background-color: #378CAB;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #3C4981;
+  background-color: #3C4981A8;
   :hover{
     color: white;
     cursor: pointer;
@@ -433,7 +433,7 @@ background-color: #378CAB;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #E97924;
+  background-color: #E97924A8;
   :hover{
     color: white;
     cursor: pointer;
@@ -464,7 +464,7 @@ width: 250px;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #E7C57F;
+  background-color: #E7C57FA8;
 }
 .dGreen {
   display: flex;
@@ -473,7 +473,7 @@ width: 250px;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #048A81;
+  background-color: #048A81A8;
 
 }
 .dRed {
@@ -483,7 +483,7 @@ width: 250px;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #F40707;
+  background-color: #F40707A8;
 }
 .dPurple {
   display: flex;
@@ -492,6 +492,7 @@ width: 250px;
   font-size: 25px;
   width: 100%;
   height: 100%;
+  /* TODO figure out why this is a different color */
   background-color: #3C4981;
 }
 .dOrange {
@@ -501,7 +502,7 @@ width: 250px;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  background-color: #E97924;
+  background-color: #E97924A8;
 }
 
 @media only screen and (min-width: 884px) {
@@ -511,7 +512,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: auto;
-background-color: #E97924;
+background-color: #E97924A8;
 
 .dBlue {
   display: flex;
@@ -529,7 +530,7 @@ background-color: #E97924;
   font-size: 40px;
   width: 100%;
   height: 100%;
-  background-color: #E7C57F;
+  background-color: #E7C57FA8;
 }
 .dGreen {
   display: flex;
@@ -538,7 +539,7 @@ background-color: #E97924;
   font-size: 40px;
   width: 100%;
   height: 100%;
-  background-color: #048A81;
+  background-color: #048A81A8;
 }
 .dRed {
   display: flex;
@@ -547,7 +548,7 @@ background-color: #E97924;
   font-size: 40px;
   width: 100%;
   height: 100%;
-  background-color: #F40707;
+  background-color: #F40707A8;
 }
 .dPurple {
   display: flex;
@@ -556,7 +557,7 @@ background-color: #E97924;
   font-size: 40px;
   width: 100%;
   height: 100%;
-  background-color: #3C4981;
+  background-color: #3C4981A8;
 }
 .dOrange {
   display: flex;
@@ -565,7 +566,7 @@ background-color: #E97924;
   font-size: 40px;
   width: 100%;
   height: 100%;
-  background-color: #E97924;
+  background-color: #E97924A8;
 }
 }
 `

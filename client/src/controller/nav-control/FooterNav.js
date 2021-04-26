@@ -1,10 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// Stylesheet
 import { CWrap, SocialWrap, DetailsWrap } from '../../style/Wrapper'
+
+// Assets
 import Insta from '../../asset/img/insta.png'
 import FB from '../../asset/img/facebook.png'
 import Twit from '../../asset/img/twitter.png'
 import YT from '../../asset/img/youtube.png'
-import { Link } from 'react-router-dom'
 import NLForm from '../NLForm'
 
 export default function FooterNav() {

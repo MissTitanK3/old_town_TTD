@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
-import { useQuery } from "react-query";
-import axios from 'axios'
-import { useWPDataStore } from '../api/store'
 import { Link } from 'react-router-dom';
+
+// Data
+import axios from 'axios'
+import { useQuery } from "react-query";
+import { useWPDataStore } from '../api/store'
 import MapBox from '../api/MapBox';
-import { FilterCard, CardBtn, Results } from '../style/Components';
+
+// Stylesheets
+import { FilterCard, CardBtn, Results, PageBreakAlt } from '../style/Components';
 import { FilterWrapper, MapWrap } from '../style/Wrapper';
+
+// Assets
 import OTLogo from '../asset/img/OTLogo.png'
 import FilteredBanner from '../model/FilteredBanner';
+import AltTitleCard from '../model/AltTitleCard';
+import PageBreakOne from '../asset/img/page_break_one.png'
 
 export default function Directory() {
   const [filtered, setFiltered] = useState('all')
@@ -76,6 +84,13 @@ export default function Directory() {
   return (
     <>
       {/* TODO add feature to expand card imgages when active */}
+      <div>
+        <PageBreakAlt>
+          {/* TODO Adjust the size of the pagebreaks */}
+          <img src={PageBreakOne} alt="Page Break" />
+        </PageBreakAlt>
+        <AltTitleCard name='Directory' styles='aBlue' />
+      </div>
       <FilterWrapper>
         <FilterCard onClick={() => setFiltered('food')} >
           <img src={OTLogo} alt="" />

@@ -322,6 +322,97 @@ span {
 }
 `
 
+export const EctTitleWrap = styled.div`
+/* TODO bug with VW mobile */
+background-color: #E97924;
+font-size: 1.5rem;
+font-weight: 900;
+height: 75px;
+width: 75%;
+display: flex;
+align-items: center;
+position: relative;
+z-index:0;
+margin: 35px 0;
+span {
+  width: 100%;
+}
+.aRed {
+  background-color: #313A64;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  position: absolute;
+  top: 5px;
+  left: 107px;
+  z-index: -20;
+}
+.aBlue {
+  background-color: #313A64;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  position: absolute;
+  top: 5px;
+  left: 107px;
+  z-index: -20;
+}
+.aTeal {
+  background-color: #83CFCB;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  position: absolute;
+  top: 5px;
+  left: 107px;
+  z-index: -20;
+}
+@media only screen and (min-width: 884px) {
+background-color: #E7C57F;
+font-size: 75px;
+font-weight: 900;
+height: 125px;
+width: 450px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+padding-left: 50px;
+position: relative;
+z-index:0;
+margin: 35px 0;
+span {
+  width: 100%;
+}
+.aRed {
+  background-color: #313A64;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  position: absolute;
+  top: 5px;
+  left: 205px;
+  z-index: -20;
+}
+.aTeal {
+  background-color: #83CFCB;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  position: absolute;
+  top: 5px;
+  left: 205px;
+  z-index: -20;
+}
+
+}
+`
+
 export const AbsCardWrap = styled.div`
 display: flex;
 justify-content: center;
@@ -565,4 +656,22 @@ max-width: 1600px;
 export const MapWrap = styled.div`
 display: flex;
 justify-content:center;
+`
+
+export const EventsWrap = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #83CFCB;
+padding: 100px 0 100px 175px;
+`
+
+export const EventsCardWrapper = styled.div`
+background-color: #83CFCB;
+hr {
+  width: 70%;
+  height: 3px;
+  background-color: black;
+  border: none;
+}
 `

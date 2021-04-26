@@ -8,7 +8,7 @@ import { useWPDataStore } from '../api/store'
 import MapBox from '../api/MapBox';
 
 // Stylesheets
-import { FilterCard, CardBtn, Results, PageBreakAlt } from '../style/Components';
+import { FilterCard, CardBtn, Results, PageBreakAlt, Discover } from '../style/Components';
 import { FilterWrapper, MapWrap } from '../style/Wrapper';
 
 // Assets
@@ -90,6 +90,7 @@ export default function Directory() {
           <img src={PageBreakOne} alt="Page Break" />
         </PageBreakAlt>
         <AltTitleCard name='Directory' styles='aBlue' />
+        <Discover>Discover the best of <strong> &nbsp; Olde Town</strong></Discover>
       </div>
       <FilterWrapper>
         <FilterCard onClick={() => setFiltered('food')} >

@@ -332,7 +332,7 @@ img{
 @media only screen and (min-width: 884px) {
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: space-evenly;
 align-items: center;
 margin: 5px;
 height: 400px;
@@ -354,7 +354,7 @@ export const CardBtn = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-height: 35px;
+height: 85px;
 width: 250px;
 background-color: #378CAB;
 :hover{
@@ -577,6 +577,7 @@ align-items: center;
 flex-wrap: wrap;
 max-width: 850px;
 margin: auto;
+padding: 150px 0;
 a {
   display: flex;
   justify-content: left;
@@ -593,4 +594,10 @@ a {
     color: #E97924;
   }
 }
+`
+
+export const Discover = styled.h2`
+font-size: 60px;
+display: flex;
+font-weight: normal;
 `

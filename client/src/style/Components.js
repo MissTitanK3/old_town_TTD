@@ -601,3 +601,93 @@ font-size: 60px;
 display: flex;
 font-weight: normal;
 `
+
+export const EventImg = styled.div`
+margin: 0 75px;
+position: relative;
+img {
+height: 400px;
+display: flex;
+}
+.bBlue {
+border: 30px solid #313A64;
+}
+.bOr {
+border: 30px solid #E7B22D;
+}
+.bDOr {
+border: 30px solid #E97924;
+}
+
+.aLime {
+  background-color: #CBE18C;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(97% 66%, 100% 66%, 100% 100%, 75% 100%, 5% 100%, 5% 95%, 97% 95%);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: 20;
+}
+.aRed {
+  background-color: #F40707;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(97% 66%, 100% 66%, 100% 100%, 75% 100%, 5% 100%, 5% 95%, 97% 95%);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: 20;
+}
+.aLOr {
+  background-color: #E7C57F;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(97% 66%, 100% 66%, 100% 100%, 75% 100%, 5% 100%, 5% 95%, 97% 95%);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: 20;
+}
+.aBlue {
+  background-color: #3C4981;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(97% 66%, 100% 66%, 100% 100%, 75% 100%, 5% 100%, 5% 95%, 97% 95%);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: 20;
+}
+`
+
+export const EventDetails = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+height: 250px;
+width:100%;
+span {
+  font-size: 50px;
+  font-weight: bolder;
+}
+p {
+  width: 450px;
+  font-size: 30px;
+}
+`
+export const GreenBtn = styled.div`
+width: 190px;
+padding: 15px;
+background-color: #048A81;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 200px;
+margin-top: 15px;
+:hover {
+  background-color: white;
+  color: #048A81;
+}
+`

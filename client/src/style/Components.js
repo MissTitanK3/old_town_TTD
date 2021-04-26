@@ -292,13 +292,15 @@ font-weight: 900;
 
 export const BusSocials = styled.div`
 display: flex;
+flex-direction: column;
 margin: auto;
 align-items: center;
+width: 100%;
 justify-content: center;
-font-size: 25px;
+margin-bottom: 35px;
 a {
   display: flex;
-  margin: 100px 0;
+  margin: 10px 0;
   padding: 0 10px;
   color: black;
   text-decoration: none;
@@ -307,7 +309,287 @@ a {
     color: #E97924;
   }
 }
+img{
+  width: 25px;
+}
+@media only screen and (min-width: 884px) {
+font-size: 25px;
+flex-direction: row;
+a {
+  display: flex;
+  margin: 100px 0;
+  padding: 0 10px;
+}
 img {
   width: 55px;
+}
+}
+`
+export const FilterCard = styled.div`
+img{
+  display: none;
+}
+@media only screen and (min-width: 884px) {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+margin: 5px;
+height: 400px;
+width: 400px;
+img {
+  display: initial;
+  width: 80%;
+  box-shadow: 2px 2px 5px black;
+  height: 250px;
+  width: 250px;
+  :hover{
+    background-color: silver;
+    cursor: pointer;
+  }
+}
+}
+`
+export const CardBtn = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 35px;
+width: 250px;
+background-color: #378CAB;
+:hover{
+  color: white;
+  cursor: pointer;
+}
+.dBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #378CAB;
+  :hover{
+    color: white;
+    cursor: pointer;
+  }
+}
+.dTan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #E7C57F;
+  :hover{
+    color: white;
+    cursor: pointer;
+  }
+}
+.dGreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #048A81;
+  :hover{
+    color: white;
+    cursor: pointer;
+  }
+}
+.dRed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #F40707;
+  :hover{
+    color: white;
+    cursor: pointer;
+  }
+}
+.dPurple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #3C4981;
+  :hover{
+    color: white;
+    cursor: pointer;
+  }
+}
+.dOrange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #E97924;
+  :hover{
+    color: white;
+    cursor: pointer;
+  }
+}
+`
+export const FilterBanner = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+height: 50px;
+width: 250px;
+
+.dBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #378CAB;
+}
+.dTan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #E7C57F;
+}
+.dGreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #048A81;
+
+}
+.dRed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #F40707;
+}
+.dPurple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #3C4981;
+}
+.dOrange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: #E97924;
+}
+
+@media only screen and (min-width: 884px) {
+height: 75px;
+width: 450px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+background-color: #E97924;
+
+.dBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #378CAB;
+}
+.dTan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #E7C57F;
+}
+.dGreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #048A81;
+}
+.dRed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #F40707;
+}
+.dPurple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #3C4981;
+}
+.dOrange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #E97924;
+}
+}
+`
+export const Results = styled.div`
+display: flex;
+justify-content: left;
+align-items: center;
+flex-wrap: wrap;
+max-width: 850px;
+margin: auto;
+a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 15px;
+  padding-left: 15px;
+  color: black;
+  width: 380px;
+  font-size: 25px;
+  height: 75px;
+  text-decoration: none;
+  :hover{
+    color: #E97924;
+  }
 }
 `

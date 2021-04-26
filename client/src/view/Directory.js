@@ -4,11 +4,16 @@ import axios from 'axios'
 import { useWPDataStore } from '../api/store'
 import { Link } from 'react-router-dom';
 import MapBox from '../api/MapBox';
+import { FilterCard, CardBtn, Results } from '../style/Components';
+import { FilterWrapper, MapWrap } from '../style/Wrapper';
+import OTLogo from '../asset/img/OTLogo.png'
+import FilteredBanner from '../model/FilteredBanner';
 
 export default function Directory() {
   const [filtered, setFiltered] = useState('all')
   const WPData = useWPDataStore(state => state.someData)
   const addWPData = useWPDataStore(state => state.addData)
+  let mapData = []
 
   function useBusiness() {
     return useQuery("posts", async () => {
@@ -33,60 +38,143 @@ export default function Directory() {
 
   function results(data) {
     try {
-      return data.map((bus, index) => (
-        <Link to={`/directory/${index}`} key={bus.id} > { bus.title.rendered} <br /> </Link >
+      mapData.push(data)
+      let values = data.map((bus, index) => (
+        <Link to={`/directory/${index}`} key={bus.id} >
+          <strong>
+            {bus.title.rendered}
+            <br />
+            {bus.acf.phone_number}
+          </strong>
+          <br /> </Link >
       ))
+      return values
     } catch (error) {
       console.error(error)
     }
   }
 
+  function FilterText(key) {
+    switch (key) {
+      case 'food':
+        return "Food & Drink"
+      case 'beauty':
+        return "Beauty & Wellness"
+      case 'retail':
+        return "Retail"
+      case 'services':
+        return "Services"
+      case 'orgs':
+        return "Organization"
+      case 'parking':
+        return "Parking"
+      default:
+        break;
+    }
+  }
+
   return (
     <>
-      <button onClick={() => setFiltered('all')} >All</button>
-      <button onClick={() => setFiltered('food')} >Food & Drink</button>
-      <button onClick={() => setFiltered('beauty')} >Beauty & Wellness</button>
-      <button onClick={() => setFiltered('retail')} >Retail</button>
-      <button onClick={() => setFiltered('services')} >Services</button>
-      <button onClick={() => setFiltered('orgs')} >Organization</button>
-      <button onClick={() => setFiltered('parking')} >Parking</button>
-      <hr />
-      {
-        filtered === 'all' ?
-          results(WPData)
-          : null
+      {/* TODO add feature to expand card imgages when active */}
+      <FilterWrapper>
+        <FilterCard onClick={() => setFiltered('food')} >
+          <img src={OTLogo} alt="" />
+          <CardBtn>
+            <div className='dBlue'>
+              Food & Drink
+            </div>
+          </CardBtn>
+        </FilterCard>
+        <FilterCard onClick={() => setFiltered('beauty')} >
+          <img src={OTLogo} alt="" />
+          <CardBtn>
+            <div className='dTan'>
+              Beauty & Wellness
+            </div>
+          </CardBtn>
+        </FilterCard>
+        <FilterCard onClick={() => setFiltered('retail')} >
+          <img src={OTLogo} alt="" />
+          <CardBtn>
+            <div className='dGreen'>
+              Retail
+            </div>
+          </CardBtn>
+        </FilterCard>
+        <FilterCard onClick={() => setFiltered('services')} >
+          <img src={OTLogo} alt="" />
+          <CardBtn>
+            <div className='dRed'>
+              Services
+            </div>
+          </CardBtn>
+        </FilterCard>
+        <FilterCard onClick={() => setFiltered('orgs')} >
+          <img src={OTLogo} alt="" />
+          <CardBtn>
+            <div className="dPurple">
+              Organization
+            </div>
+          </CardBtn>
+        </FilterCard>
+        <FilterCard onClick={() => setFiltered('parking')} >
+          <img src={OTLogo} alt="" />
+          <CardBtn>
+            <div className="dOrange">
+              Parking
+            </div>
+          </CardBtn>
+        </FilterCard>
+      </FilterWrapper>
+      {filtered === 'all'
+        ? null
+        : <FilteredBanner text={FilterText(filtered)} />
       }
-      {
-        filtered === 'food' ?
-          filteredResults(WPData, 20)
-          : null
-      }
-      {
-        filtered === 'beauty' ?
-          filteredResults(WPData, 21)
-          : null
-      }
-      {
-        filtered === 'retail' ?
-          filteredResults(WPData, 22)
-          : null
-      }
-      {
-        filtered === 'services' ?
-          filteredResults(WPData, 23)
-          : null
-      }
-      {
-        filtered === 'orgs' ?
-          filteredResults(WPData, 24)
-          : null
-      }
-      {
-        filtered === 'parking' ?
-          filteredResults(WPData, 25)
-          : null
-      }
-      <MapBox />
+      <Results>
+        {
+          filtered === 'all' ?
+            results(WPData)
+            : null
+        }
+        {
+          filtered === 'food' ?
+            filteredResults(WPData, 20)
+            : null
+        }
+        {
+          filtered === 'beauty' ?
+            filteredResults(WPData, 21)
+            : null
+        }
+        {
+          filtered === 'retail' ?
+            filteredResults(WPData, 22)
+            : null
+        }
+        {
+          filtered === 'services' ?
+            filteredResults(WPData, 23)
+            : null
+        }
+        {
+          filtered === 'orgs' ?
+            filteredResults(WPData, 24)
+            : null
+        }
+        {
+          filtered === 'parking' ?
+            filteredResults(WPData, 25)
+            : null
+        }
+      </Results>
+      <MapWrap>
+        <MapBox data={mapData[0].map((data, i) => {
+          return (
+            { key: data?.title.rendered, lat: Number(data.acf?.latitude), lng: Number(data.acf?.longitude) }
+          )
+        })}>
+        </MapBox>
+      </MapWrap>
     </>
   )
 }

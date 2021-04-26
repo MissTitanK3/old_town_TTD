@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import '../App.css'
 // MapBox
 import MapBox from '../api/MapBox'
-import mapboxgl, { Marker } from 'mapbox-gl';
 // Zustand
 import { useWPDataStore } from '../api/store'
 import shallow from 'zustand/shallow'
-
-// Material UI Icons
-
 
 // Assets
 import FB from '../asset/img/facebook.png'
@@ -17,6 +13,7 @@ import ANCHOR from '../asset/img/anchorfm.png'
 import INSTA from '../asset/img/insta.png'
 import TWIT from '../asset/img/twitter.png'
 import YT from '../asset/img/youtube.png'
+
 // import PINS from '../asset/img/pinterest.png'
 import DefaultImg from '../asset/img/OTLogo.png'
 import PageBreakOne from '../asset/img/page_break_one.png'
@@ -30,12 +27,8 @@ export default function BuisnessCard() {
   const { id } = useParams()
   const WPData = useWPDataStore(state => state.someData[id], shallow)
   const updateDB = '<div>Please Update Database</div>'
-  console.log(WPData)
-
 
   function newLine(props) {
-    console.log(props)
-    // TODO Bug here to remove commas
     return props.split('\n').map(str => `<span><br/>${str}</span>`).join('')
   }
 
@@ -47,10 +40,8 @@ export default function BuisnessCard() {
         </PageBreakAlt>
       </div>
       <TitleCard title={WPData?.title.rendered ? WPData.title.rendered : updateDB} styles='aRed' />
-
       <div>
       </div>
-
       <BDetailsWrap>
         <div>
           <div dangerouslySetInnerHTML={{ __html: WPData?.acf.address ? newLine(WPData.acf.address) : updateDB }} />
@@ -58,10 +49,9 @@ export default function BuisnessCard() {
           <Hours dangerouslySetInnerHTML={{ __html: WPData?.acf.business_hours ? newLine(WPData.acf.business_hours) : updateDB }} />
         </div>
         <div>
-          <BusinessLogo src={WPData?.acf.images?.sizes.large ? WPData?.acf.images?.sizes.large : DefaultImg} alt={WPData?.acf.images?.filename ? WPData?.acf.images.filename : 'File Doesnt Exist'} />
+          <BusinessLogo src={WPData?.acf?.images?.sizes?.large ? WPData?.acf.images?.sizes.large : DefaultImg} alt={WPData?.acf.images?.filename ? WPData?.acf.images.filename : 'File Doesnt Exist'} />
         </div>
       </BDetailsWrap>
-
       <Excerpt>
         <div dangerouslySetInnerHTML={{ __html: WPData?.excerpt.rendered ? WPData.excerpt.rendered : updateDB }} />
       </Excerpt>
@@ -131,10 +121,9 @@ export default function BuisnessCard() {
         </div>
       </BusSocials>
       {WPData?.acf.latitude ?
-        <MapBox data={[{ key: WPData?.title.rendered, lat: parseInt(WPData?.acf.latitude), lng: parseInt(WPData?.acf.longitude) }]} >
+        <MapBox data={[{ key: WPData?.title.rendered, lat: Number(WPData?.acf.latitude), lng: Number(WPData?.acf.longitude) }]} >
         </MapBox>
         : <h1>Loading...</h1>}
-
     </BCardWrapper >
   )
 }

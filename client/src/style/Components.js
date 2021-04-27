@@ -691,3 +691,45 @@ margin-top: 15px;
   color: #048A81;
 }
 `
+
+export const FECards = styled.div`
+margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: #55C4CA;
+position: relative;
+height: 400px;
+width: 400px;
+img {
+  width: 325px;
+}
+span {
+  font-size: 45px;
+  font-weight: 900;
+  margin-bottom: -30px;
+}
+.aBlue {
+  background-color: #3C4981;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
+  position: absolute;
+  bottom: -25px;
+  right: -5px;
+  z-index: 20;
+}
+`
+export const FECardsDetails = styled.div`
+width: 70%;
+height: 30%;
+font-size: 30px;
+/* font-weight: bold; */
+margin-top: 15px;
+text-align: right;
+display: flex;
+flex-direction: column;
+margin-right: -40px;
+
+`

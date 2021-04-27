@@ -6,7 +6,7 @@ import PageBreakOne from '../asset/img/page_break_one.png'
 import PiannoGirl from '../asset/img/pianno_girl.png'
 
 // Stylesheet
-import { Discover, FECards, FECardsDetails, PageBreakAlt } from '../style/Components'
+import { Discover, PageBreakAlt } from '../style/Components'
 import EventsCard from '../controller/EventsCard'
 import { EventsCardWrapper, FECardWrapper } from '../style/Wrapper'
 import FECard from '../model/FECard'

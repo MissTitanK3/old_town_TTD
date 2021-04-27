@@ -8,7 +8,8 @@ import PiannoGirl from '../asset/img/pianno_girl.png'
 // Stylesheet
 import { Discover, PageBreakAlt } from '../style/Components'
 import EventsCard from '../controller/EventsCard'
-import { EventsCardWrapper } from '../style/Wrapper'
+import { EventsCardWrapper, FECardWrapper } from '../style/Wrapper'
+import FECard from '../model/FECard'
 export default function Events() {
   return (
     <div>
@@ -59,9 +60,34 @@ export default function Events() {
           btn='GO TO FORM'
         />
       </EventsCardWrapper>
-      <div className="featured">
-        featured events
-      </div>
+      <FECardWrapper>
+        {/* TODO make this dynamic with event data */}
+        <h2>FEATURED EVENTS</h2>
+        <div>
+          <FECard
+            img={PiannoGirl}
+            alt='Pianno Girl'
+            title='FESTIVAL'
+            dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
+            accent='aBlue'
+          />
+          <FECard
+            img={PiannoGirl}
+            alt='Pianno Girl'
+            title='FESTIVAL'
+            dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
+            accent='aBlue'
+          />
+          <FECard
+            img={PiannoGirl}
+            alt='Pianno Girl'
+            title='FESTIVAL'
+            dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
+            accent='aBlue'
+          />
+        </div>
+        <hr />
+      </FECardWrapper>
     </div>
   )
 }

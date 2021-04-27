@@ -675,3 +675,27 @@ hr {
   border: none;
 }
 `
+
+export const FECardWrapper = styled.div`
+margin: 250px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+h2 {
+font-weight: bolder;
+font-size: 55px;
+}
+div {
+display: flex;
+margin: 15px;
+}
+hr {
+  width: 70%;
+  height: 3px;
+  background-color: black;
+  border: none;
+  margin: 200px 0 -200px 0;
+
+}
+`

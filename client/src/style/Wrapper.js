@@ -699,3 +699,9 @@ hr {
 
 }
 `
+
+export const CalendarWrapper = styled.div`
+display: flex;
+width: 400px;
+
+`

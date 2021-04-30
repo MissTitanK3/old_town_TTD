@@ -597,9 +597,11 @@ a {
 `
 
 export const Discover = styled.h2`
-font-size: 60px;
+font-size: 71px;
 display: flex;
 font-weight: normal;
+width: 1200px;
+padding:40px 0 40px 85px;
 `
 
 export const EventImg = styled.div`
@@ -675,6 +677,9 @@ p {
   width: 450px;
   font-size: 30px;
 }
+a {
+  text-decoration: none;
+}
 `
 export const GreenBtn = styled.div`
 width: 190px;
@@ -693,25 +698,71 @@ margin-top: 15px;
 `
 
 export const FECards = styled.div`
-margin: auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: #55C4CA;
-position: relative;
+div {
+  
+}
 height: 400px;
 width: 400px;
 img {
   width: 325px;
+  padding: 25px;
 }
 span {
   font-size: 45px;
   font-weight: 900;
   margin-bottom: -30px;
 }
+.bBlue {
+margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+background-color: #55C4CA;
+}
+.bOran {
+margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+background-color: #E7C57F;
+
+}
+.bGreen {
+margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+background-color: #CBE18C;
+
+}
 .aBlue {
   background-color: #3C4981;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
+  position: absolute;
+  bottom: -25px;
+  right: -5px;
+  z-index: 20;
+}
+.aRed {
+  background-color: #F40707;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
+  position: absolute;
+  bottom: -25px;
+  right: -5px;
+  z-index: 20;
+}
+.aGreen {
+  background-color: #048A81;
   height: 100%;
   width: 100%;
   clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);

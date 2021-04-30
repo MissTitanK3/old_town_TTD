@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // Stylesheet
 import { EventDetails, EventImg, GreenBtn } from '../style/Components'
@@ -19,7 +20,9 @@ export default function EventsCard(props) {
           <div>
             <p>{props.desc}</p>
           </div>
-          <GreenBtn>{props.btn}</GreenBtn>
+          <Link to={props.dest}>
+            <GreenBtn>{props.btn}</GreenBtn>
+          </Link>
         </EventDetails>
       </EventsWrap>
     </div>

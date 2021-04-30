@@ -28,6 +28,7 @@ export default function Events() {
           title='EVENTS CALENDAR'
           desc="Planning an event in Olde Town? Tell us the details and we'll get your event added to the community calendar!"
           btn='GO TO CALENDAR'
+          dest='/events-calendar'
         />
         <hr />
         <EventsCard
@@ -38,6 +39,7 @@ export default function Events() {
           title='SUBMIT AN EVENT'
           desc="Planning an event in Olde Town?"
           btn='SUBMIT AN EVENT'
+          dest='/events-calendar'
         />
         <hr />
         <EventsCard
@@ -48,6 +50,7 @@ export default function Events() {
           title='VOLUNTEER'
           desc="Want to lend a hand? Click here to fill out the colunteer form!"
           btn='GO TO FORM'
+          dest='/events-calendar'
         />
         <hr />
         <EventsCard
@@ -57,7 +60,9 @@ export default function Events() {
           alt='Pianno Girl'
           title='VENDOR REGISTRATION'
           desc="Want to register as a vendor? Click here to fill out the form!"
+          // TODO Modal or new page?
           btn='GO TO FORM'
+          dest='/events-calendar'
         />
       </EventsCardWrapper>
       <FECardWrapper>
@@ -66,6 +71,7 @@ export default function Events() {
         <div>
           <FECard
             img={PiannoGirl}
+            bColor='bBlue'
             alt='Pianno Girl'
             title='FESTIVAL'
             dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
@@ -73,17 +79,19 @@ export default function Events() {
           />
           <FECard
             img={PiannoGirl}
+            bColor='bOran'
             alt='Pianno Girl'
             title='FESTIVAL'
             dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
-            accent='aBlue'
+            accent='aRed'
           />
           <FECard
             img={PiannoGirl}
+            bColor='bGreen'
             alt='Pianno Girl'
             title='FESTIVAL'
             dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
-            accent='aBlue'
+            accent='aGreen'
           />
         </div>
         <hr />

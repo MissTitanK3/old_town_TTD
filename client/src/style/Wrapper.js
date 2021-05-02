@@ -705,3 +705,9 @@ display: flex;
 width: 400px;
 
 `
+
+export const EventsDetailsWrap = styled.div`
+display: flex;
+justify-content: left;
+align-items: center;
+`

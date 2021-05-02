@@ -784,3 +784,60 @@ flex-direction: column;
 margin-right: -40px;
 
 `
+
+export const DateCard = styled.div`
+width: 70px;
+height: 65px;
+text-align: center;
+background-color: #C2C6C9;
+position: relative;
+margin: 25px;
+h4 {
+  margin: 0;
+  padding: 3px 0;
+  background-color: #3C4981;
+  color: white;
+}
+span {
+  font-weight: bolder;
+  font-size: 40px;
+  height: 30%;
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  width: 50%;
+}
+p  {
+  margin: 8px;
+  font-weight: bolder;
+}
+`
+export const DateDetails = styled.div`
+font-size: 22px;
+display: flex;
+flex-direction: column;
+width: 400px;
+position: relative;
+h3 {
+font-weight: bolder;
+margin: 0;
+}
+span {
+  margin: 0;
+  padding-right: 15px;
+  height: 25px;
+}
+p {
+  margin: 0;
+  height: 25px;
+}
+div {
+  display: flex;
+  justify-content" center;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  height: 30px;
+}
+`

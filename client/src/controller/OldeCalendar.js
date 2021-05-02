@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import { CalendarWrapper } from '../style/Wrapper';
-import 'react-calendar/dist/Calendar.css';
 
 export default function OldeCalendar() {
 	const [value, onChange] = useState(new Date());
@@ -14,10 +13,14 @@ export default function OldeCalendar() {
 	return (
 		<CalendarWrapper>
 			<Calendar
+				className='calendar'
 				onChange={onChange}
 				value={value}
 				onClickDay={showEvents}
 				calendarType='US'
+				showNeighboringMonth={false}
+				prev2Label={false}
+				next2Label={false}
 			/>
 		</CalendarWrapper>
 	);

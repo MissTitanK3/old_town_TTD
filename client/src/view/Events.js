@@ -1,5 +1,8 @@
 import React from 'react'
 
+// DATA
+import { useWPEventStore } from '../api/store'
+
 // Assets
 import EctTitleCard from '../model/EctTitleCard'
 import PageBreakOne from '../asset/img/page_break_one.png'
@@ -10,7 +13,24 @@ import { Discover, PageBreakAlt } from '../style/Components'
 import EventsCard from '../controller/EventsCard'
 import { EventsCardWrapper, FECardWrapper } from '../style/Wrapper'
 import FECard from '../model/FECard'
+import { useQuery } from 'react-query'
+import axios from 'axios'
+
 export default function Events() {
+  const WPEvent = useWPEventStore(state => state.someData)
+  const addWPEvent = useWPEventStore(state => state.addData)
+
+  function useBusiness() {
+    return useQuery("posts", async () => {
+      const { data } = await axios.get(
+        "https://oldetownarvada.org/wp-json/wp/v2/eventlistings"
+      );
+      addWPEvent(data)
+    });
+  }
+  // TODO this doesnt work in a useEffect, debug
+  useBusiness()
+
   return (
     <div>
       <PageBreakAlt>
@@ -66,31 +86,31 @@ export default function Events() {
         />
       </EventsCardWrapper>
       <FECardWrapper>
-        {/* TODO make this dynamic with event data */}
+        {/* TODO Pulls the lastest 3 entries */}
         <h2>FEATURED EVENTS</h2>
         <div>
           <FECard
             img={PiannoGirl}
             bColor='bBlue'
             alt='Pianno Girl'
-            title='FESTIVAL'
-            dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
+            title={WPEvent[0]?.acf.event_name}
+            dates={WPEvent[0]?.acf.event_date_short}
             accent='aBlue'
           />
           <FECard
             img={PiannoGirl}
             bColor='bOran'
             alt='Pianno Girl'
-            title='FESTIVAL'
-            dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
+            title={WPEvent[1]?.acf.event_name}
+            dates={WPEvent[1]?.acf.event_date_short}
             accent='aRed'
           />
           <FECard
             img={PiannoGirl}
             bColor='bGreen'
             alt='Pianno Girl'
-            title='FESTIVAL'
-            dates='4/1/2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9-5pm'
+            title={WPEvent[2]?.acf.event_name}
+            dates={WPEvent[2]?.acf.event_date_short}
             accent='aGreen'
           />
         </div>

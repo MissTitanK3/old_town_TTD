@@ -33,7 +33,7 @@ function App() {
         <Route path='/directory' component={Directory} />
         <Route path='/news' component={News} />
         <Route path='/about' component={About} />
-        <Route path='/events-card' component={EventSingleCard} />
+        <Route path='/events-card/:id' component={EventSingleCard} />
         <Route path='/events-calendar' component={EventsCal} />
         <Route path='/events' component={Events} />
         <Route path='/contact' component={ContactUs} />

@@ -1,26 +1,76 @@
 @font-face {
-  font-family: 'Neutraface Light';
-  src: url('./asset/fonts/NeutrafaceDisplay-Light.otf');
+	font-family: 'Neutraface Light';
+	src: url('./asset/fonts/NeutrafaceDisplay-Light.otf');
 }
 @font-face {
-  font-family: 'Neutraface Bold';
-  src: url('./asset/fonts/NeutrafaceDisplay-Bold.otf');
+	font-family: 'Neutraface Bold';
+	src: url('./asset/fonts/NeutrafaceDisplay-Bold.otf');
 }
 @font-face {
-  font-family: 'Neutraface Medium';
-  src: url('./asset/fonts/NeutrafaceDisplay-Medium.otf');
+	font-family: 'Neutraface Medium';
+	src: url('./asset/fonts/NeutrafaceDisplay-Medium.otf');
 }
 
 body {
-  margin: 0;
-  font-family: 'Neutraface Light', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: 'Neutraface Light', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
+
+.react-calendar {
+	width: 350px;
+	max-width: 100%;
+	background: none;
+	border: 1px solid #a0a096;
+	font-family: 'Neutraface Light', sans-serif;
+	font-size: 1.25rem;
+	line-height: 1.125em;
+	border: none;
+}
+.react-calendar button {
+	font-family: 'Neutraface Bold', sans-serif;
+	border: none;
+	background: none;
+	line-height: 1.125em;
+	font-size: 1.25rem;
+}
+.react-calendar button:hover {
+	cursor: pointer;
+}
+.react-calendar__tile--active {
+	color: white;
+}
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+	display: none;
+}
+.react-calendar__navigation {
+	height: 44px;
+	margin-bottom: 1em;
+	background: #3c4981;
+	border: none;
+}
+.react-calendar__navigation button {
+	color: white;
+}
+.react-calendar__month-view {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+/* 
+.react-calendar div {
+	display: flex;
+	align-items: flex-end;
+} */
 
 /* @import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
 

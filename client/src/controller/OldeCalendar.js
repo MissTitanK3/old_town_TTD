@@ -46,17 +46,21 @@ export default function OldeCalendar() {
     console.log(filteredData)
   };
 
+
   return (
     <>
-      <h2>{value.toString().slice(3, 15)}</h2>
-      <CalendarWrapper>
-        <Calendar
-          onChange={onChange}
-          value={value}
-          onClickDay={showEvents}
-          calendarType='US'
-        />
-      </CalendarWrapper>
+		<CalendarWrapper>
+			<Calendar
+				className='calendar'
+				onChange={onChange}
+				value={value}
+				onClickDay={showEvents}
+				calendarType='US'
+				showNeighboringMonth={false}
+				prev2Label={false}
+				next2Label={false}
+			/>
+		</CalendarWrapper>
       {/* Feed the filtered data */}
       <div className='details'>
         {

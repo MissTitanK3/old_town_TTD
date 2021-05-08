@@ -1,12 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import TavernPatio from '../asset/img/tavern_patio.png'
 import WaterTower from '../asset/img/water_tower.png'
 import TwoPeoplePatio from '../asset/img/two_people_patio.png'
-import { AboutWrapper } from '../style/Wrapper'
-import { AboutDetailsWrapper } from '../style/Wrapper'
-import { AboutImg, AboutIntro, AboutTitle, AboutTxtBody } from '../style/Components'
+import { AboutBoardWrapper, AboutWrapper, AboutInvolvedWrapper, AboutDocWrapper } from '../style/Wrapper'
+import { AboutDetailsWrapper, AboutPositionsWrapper } from '../style/Wrapper'
+import { AboutImg, AboutIntro, AboutPositions, AboutSeatPositions, AltAboutSeatPositions, AboutTitle, AboutTxtBody, TintRed, AboutHeaderTitle, AboutInvolvedApply, AboutDocuments } from '../style/Components'
 
 export default function About() {
+  const infoLink = <Link to='/'>info@oldetownarvada.org</Link>
   return (
     <AboutWrapper>
       <AboutImg>
@@ -33,96 +35,145 @@ export default function About() {
               <br />
             The BID's operating plan focuses on advocacy, marketing and events, placemaking, mobility, physical improvements and safety.
             </p>
+            <div className='aTan' />
           </div>
         </AboutTxtBody>
+      </AboutDetailsWrapper>
+      <TintRed>
         <div className="img">
           <img src={TwoPeoplePatio} alt="" />
         </div>
-      </AboutDetailsWrapper>
-      <div className="board">
-        <div className="title">
-          <h2>OUR BOARD</h2>
+      </TintRed>
+      <AboutBoardWrapper>
+        <div className="board">
+          <AboutImg>
+            <div>
+              <h2 style={{ backgroundColor: "#048A81", color: "white" }}>
+                OUR BOARD
+              </h2>
+              <div className='aOrange' />
+            </div>
+          </AboutImg>
+          <h4>The BID is governed by a ten member board comprised of business and/or property owners that serve a three year term.</h4>
+          <AboutPositionsWrapper>
+            <AboutSeatPositions>
+              <AboutPositions>
+                <p>Deborah <br /> Pearson</p>
+                <span>President</span>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Scott <br /> Spears</p>
+                <span>Vice President</span>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Lori <br /> Drinka</p>
+                <span>Secretary</span>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Lisa <br /> Reich</p>
+                <span>Tresurer</span>
+              </AboutPositions>
+            </AboutSeatPositions>
+            <AltAboutSeatPositions >
+              <AboutPositions>
+                <p>Charlie <br /> Berger</p>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Brandon <br /> Capps</p>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Peter <br /> Kazura</p>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Casey <br /> Adler</p>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Debbie <br /> Hansen</p>
+              </AboutPositions>
+              <AboutPositions>
+                <p>Jamie <br /> Hollier</p>
+              </AboutPositions>
+            </AltAboutSeatPositions>
+          </AboutPositionsWrapper>
+          <h4>The BID Board generally meets on the 4th Tuesday of each month. During the holidays, meetings may be changed to accommodate the calendar. Special meetings may be held throughout the year. All board and special meetings are open to the public. Meeting agendas with meeting locations are posted in kiosk in the Olde Town Square, Olde Wadsworth & 57th Street or in the resources below.</h4>
         </div>
-        <div className="intro">
-          <p>The BID is governed by a ten member board comprised of business and/or property owners that serve a three year term.</p>
-        </div>
-        <div className="positions">
-          <h3>Deborah Pearson</h3>
-          <span>President</span>
-          <h3>Scott Spears</h3>
-          <span>Vice President</span>
-          <h3>Lori Drinka</h3>
-          <span>Secretary</span>
-          <h3>Lisa Reich</h3>
-          <span>Tresurer</span>
-          <h3>Charlie Berger</h3>
-          <h3>Brandon Capps</h3>
-          <h3>Peter Kazura</h3>
-          <h3>Casey Adler</h3>
-          <h3>Debbie Hansen</h3>
-          <h3>Jamie Hollier</h3>
-        </div>
-        <div className="outro">
-          <p>The BID Board generally meets on the 4th Tuesday of each month. During the holidays, meetings may be changed to accommodate the calendar. Special meetings may be held throughout the year. All board and special meetings are open to the public. Meeting agendas with meeting locations are posted in kiosk in the Olde Town Square, Olde Wadsworth & 57th Street or in the resources below.</p>
-        </div>
-      </div>
-      <div className="involved">
-        <h2>Want to be more involved with the Olde Town Arvada BID?</h2>
-        <div className="apply">
+      </AboutBoardWrapper>
+      <AboutInvolvedWrapper>
+        <AboutHeaderTitle>
+          <h2 >Want to be more involved with the <br /> Olde Town Arvada BID?</h2>
+        </AboutHeaderTitle>
+        <AboutInvolvedApply>
           <div className="title">
             <h3>Apply to be a member of the BID Board!</h3>
           </div>
           <div className="desc">
-            <p>The BID Board is currently accepting application for condideration. Please submit your application by March 17th, 2021 to be considered for andy 2021 Board vacancies</p>
+            <span>The BID Board is currently accepting application for condideration. Please submit your application by March 17th, 2021 to be considered for andy 2021 Board vacancies</span>
           </div>
           <div className="links">
             <div className="eapp">
-              <p>Complete the Electronic Application</p>
+              <span>
+                <Link to='/'>Complete the Electronic Application</Link>
+              </span>
+              <span>
+                <Link to='/'>Download the Application as a PDF</Link>
+              </span>
             </div>
             <div className="download">
-              <p>Download the Application as a PDF</p>
             </div>
             <div className="email">
-              <p>-Email your completed form to info@oldetownarvada.org</p>
+              {/* TODO Figure out how to format link within p tag */}
+              <p>-Email your completed form to &nbsp;{infoLink} </p>
             </div>
           </div>
-        </div>
-        <div className="subcom">
-          <h2>Join a Subcommittee!</h2>
+        </AboutInvolvedApply>
+        <AboutInvolvedApply>
+          <h3>Join a Subcommittee!</h3>
           <div className="email">
-            <span>Send us an email at info@oldetownarvada.org to let us know you are interested.</span>
+            <span>Send us an email at&nbsp;{infoLink}  to let us know you are interested.
+            </span>
           </div>
-        </div>
-        <div className="volunteer">
-          <h2>Volunteer for Olde Town Events!</h2>
+        </AboutInvolvedApply>
+        <AboutInvolvedApply>
+          <h3>Volunteer for Olde Town Events!</h3>
           <div className="email">
-            <span>Send us an email at info@oldetownarvada.org to let us know you are interested.</span>
+            <span>Send us an email at&nbsp;
+              <Link>
+                info@oldetownarvada.org
+              </Link>
+              to let us know you are interested.</span>
           </div>
-        </div>
-      </div>
-      <div className="docs">
-        <div className="budget">
-          <h3>Budget & Operating Plans:</h3>
-          <span>2021 Planning Documents</span>
-          <span>2020 Planning Documents</span>
-          <span>2019 Planning Documents</span>
-          <span>2018 Planning Documents</span>
-        </div>
-        <div className="board">
-          <h3>Board Meeting Munutes & Agendas:</h3>
-          <span>2021 Board Meetings</span>
-          <span>2020 Board Meetings</span>
-          <span>2019 Board Meetings</span>
-          <span>2018 Board Meetings</span>
-        </div>
-        <div className="committee">
-          <h3>Committee Meeting Munutes & Agendas:</h3>
-          <span>2021 Committee Meetings</span>
-          <span>2020 Committee Meetings</span>
-          <span>2019 Committee Meetings</span>
-          <span>2018 Committee Meetings</span>
-        </div>
-      </div>
+        </AboutInvolvedApply>
+      </AboutInvolvedWrapper>
+      <AboutDocWrapper>
+        <AboutDocuments>
+          <div className="budget">
+            <h3>Budget & Operating Plans:</h3>
+            <Link to='/'>2021 Planning Documents</Link>
+            <Link to='/'>2020 Planning Documents</Link>
+            <Link to='/'>2019 Planning Documents</Link>
+            <Link to='/'>2018 Planning Documents</Link>
+          </div>
+        </AboutDocuments>
+        <AboutDocuments>
+          <div className="board">
+            <h3>Board Meeting Munutes & Agendas:</h3>
+            <Link to='/'>2021 Board Meetings</Link>
+            <Link to='/'>2020 Board Meetings</Link>
+            <Link to='/'>2019 Board Meetings</Link>
+            <Link to='/'>2018 Board Meetings</Link>
+          </div>
+        </AboutDocuments>
+        <AboutDocuments>
+          <div className="committee">
+            <h3>Committee Meeting Munutes & Agendas:</h3>
+            <Link to='/'>2021 Committee Meetings</Link>
+            <Link to='/'>2020 Committee Meetings</Link>
+            <Link to='/'>2019 Committee Meetings</Link>
+            <Link to='/'>2018 Committee Meetings</Link>
+          </div>
+
+        </AboutDocuments>
+      </AboutDocWrapper>
     </AboutWrapper>
   )
 }

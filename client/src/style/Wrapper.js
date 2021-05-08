@@ -802,9 +802,47 @@ align-items: center;
 `
 
 export const AboutWrapper = styled.div`
-border: 1px solid green;
 `
 
 export const AboutDetailsWrapper = styled.div`
-border: 1px solid blue;
+
+`
+
+export const AboutBoardWrapper = styled.div`
+background-color: #55C4CA;
+padding-bottom: 50px;
+h4 {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 1100px;
+  margin: auto;
+  padding: 25px;
+}
+
+`
+
+export const AboutPositionsWrapper = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+export const AboutInvolvedWrapper = styled.div`
+
+`
+export const AboutDocWrapper = styled.div`
+display: flex;
+font-size: 35px;
+justify-content: center;
+align-items: center;
+margin: 55px auto;
+padding: 25px 0;
+div {
+  width: 100%;
+  height: 400px;
+}
 `

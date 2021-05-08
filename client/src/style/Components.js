@@ -975,7 +975,7 @@ h2 {
   z-index: 3;
 }
 .aOrange {
-  background-color: #F40707;
+  background-color: #E97924;
   height: 80px;
   width: 500px;
   margin: auto;
@@ -1003,11 +1003,16 @@ export const AboutTxtBody = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #E7C57F;
+background-color: red;
+position: relative;
 img {
   width: 600px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
+  opacity: 80%;
+  background-color: red;
 }
 p {
   display: flex;
@@ -1018,15 +1023,138 @@ p {
   font-size: 47px;
   text-align: right;
   line-height: 1.2;
-  padding: 25px 15px 25px 125px;
+  padding: 25px 85px 25px 125px;
+  position: relative;
+  z-index: 3;
+}
+
+.aTan {
+  background-color: #E7C57F;
+  height: 300px;
+  width: 100%;
+  margin: auto;
+  clip-path: polygon(97% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 80%, 97% 80%);
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: 4;
 }
 `
 
 export const AboutTitle = styled.div`
+/* TODO move down if the red is too much */
 background-color: #E7C57F;
 height: 100%;
 margin-bottom: -110px;
 font-size: 55px;
 text-align: center;
 color: #313A64;
+position: relative;
+z-index: 5;
+`
+
+export const TintRed = styled.div`
+background-color: red;
+img {
+  width: 100%;
+  opacity: 80%;
+}
+`
+
+export const AboutPositions = styled.div`
+font-weight: bolder;
+margin: 20px;
+font-size: 20px;
+p {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 75px;
+width: 180px;
+background-color: #3C4981;
+color: white;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+span {
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  width: 180px;
+}
+`
+
+export const AboutSeatPositions = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 30px 0 5px 0;
+`
+export const AltAboutSeatPositions = styled.div`
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center;
+max-width: 660px;
+`
+
+export const AboutHeaderTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E97924;
+  color: white;
+  font-size: 65px;
+  margin: 60px auto;
+  text-align: center;
+  width: 70%;
+  h2 {
+  padding: 0;
+  margin: 10px;
+  }
+`
+
+export const AboutInvolvedApply = styled.div`
+h3 {
+  background-color: #E7C57F;
+  width: 60%;
+  font-size: 55px;
+  padding: 15px 0 15px 75px;
+}
+span, p {
+  display: flex;
+  width: 1000px;
+  margin: auto 150px;
+  font-size: 45px;
+  padding: 15px;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  color: #378CAB;
+}
+`
+
+export const AboutDocuments = styled.div`
+div {
+display: flex;
+flex-direction: column;
+padding: 15px 0;
+}
+.budget {
+  background-color: #048A8170;
+}
+.board {
+  background-color: #E7B22D70;
+}
+.committee {
+  background-color: #3C498170;
+}
+h3, a{
+  padding-left: 25px;
+}
 `

@@ -19,7 +19,13 @@ import PageBreakOne from '../asset/img/page_break_one.png'
 // Stylesheet
 import '../App.css'
 import { BCardWrapper, BDetailsWrap } from '../style/Wrapper'
-import { BusinessLogo, BusSocials, Excerpt, Hours, PageBreakAlt } from '../style/Components'
+import {
+  BusinessLogo,
+  BusSocials,
+  Excerpt,
+  Hours,
+  PageBreakAlt
+} from '../style/Components'
 
 // Models
 import TitleCard from './TitleCard'
@@ -40,26 +46,60 @@ export default function BuisnessCard() {
           <img src={PageBreakOne} alt="Page Break" />
         </PageBreakAlt>
       </div>
-      <TitleCard title={WPData?.title.rendered ? WPData.title.rendered : updateDB} styles='aRed' />
+      <TitleCard
+        title={WPData?.title.rendered
+          ? WPData.title.rendered
+          : updateDB}
+        styles='aRed'
+      />
       <div>
       </div>
       <BDetailsWrap>
         <div>
-          <div dangerouslySetInnerHTML={{ __html: WPData?.acf.address ? newLine(WPData.acf.address) : updateDB }} />
-          <div dangerouslySetInnerHTML={{ __html: WPData?.acf.phone_number ? WPData.acf.phone_number : updateDB }} />
-          <Hours dangerouslySetInnerHTML={{ __html: WPData?.acf.business_hours ? newLine(WPData.acf.business_hours) : updateDB }} />
+          <div dangerouslySetInnerHTML={{
+            __html: WPData?.acf.address
+              ? newLine(WPData.acf.address)
+              : updateDB
+          }}
+          />
+          <div dangerouslySetInnerHTML={{
+            __html: WPData?.acf.phone_number
+              ? WPData.acf.phone_number
+              : updateDB
+          }}
+          />
+          <Hours dangerouslySetInnerHTML={{
+            __html: WPData?.acf.business_hours
+              ? newLine(WPData.acf.business_hours)
+              : updateDB
+          }}
+          />
         </div>
         <div>
-          <BusinessLogo src={WPData?.acf?.images?.sizes?.large ? WPData?.acf.images?.sizes.large : DefaultImg} alt={WPData?.acf.images?.filename ? WPData?.acf.images.filename : 'File Doesnt Exist'} />
+          <BusinessLogo
+            src={WPData?.acf?.images?.sizes?.large
+              ? WPData?.acf.images?.sizes.large
+              : DefaultImg}
+            alt={WPData?.acf.images?.filename
+              ? WPData?.acf.images.filename
+              : 'File Doesnt Exist'}
+          />
         </div>
       </BDetailsWrap>
       <Excerpt>
-        <div dangerouslySetInnerHTML={{ __html: WPData?.excerpt.rendered ? WPData.excerpt.rendered : updateDB }} />
+        <div dangerouslySetInnerHTML={{
+          __html: WPData?.excerpt.rendered
+            ? WPData.excerpt.rendered
+            : updateDB
+        }}
+        />
       </Excerpt>
       <BusSocials>
         <div>
           {WPData?.acf.facebook ?
-            <a href={WPData?.acf.facebook} target="_blank" rel='noreferrer' >
+            <a href={WPData?.acf.facebook}
+              target="_blank"
+              rel='noreferrer' >
               <img src={FB} alt="" />
               <span>FACEBOOK</span>
             </a>
@@ -68,7 +108,9 @@ export default function BuisnessCard() {
         </div>
         <div>
           {WPData?.acf.anchorfm ?
-            <a href={WPData?.acf.anchorfm} target="_blank" rel='noreferrer' >
+            <a href={WPData?.acf.anchorfm}
+              target="_blank"
+              rel='noreferrer' >
               <img src={ANCHOR} alt="" />
               <span>ANCHOR.FM</span>
             </a>
@@ -77,7 +119,9 @@ export default function BuisnessCard() {
         </div>
         <div>
           {WPData?.acf.pinterest ?
-            <a href={WPData?.acf.pinterest} target="_blank" rel='noreferrer' >
+            <a href={WPData?.acf.pinterest}
+              target="_blank"
+              rel='noreferrer' >
               <img src={FB} alt="" />
               <span>PINTEREST</span>
             </a>
@@ -86,7 +130,9 @@ export default function BuisnessCard() {
         </div>
         <div>
           {WPData?.acf.instagram ?
-            <a href={WPData?.acf.instagram} target="_blank" rel='noreferrer' >
+            <a href={WPData?.acf.instagram}
+              target="_blank"
+              rel='noreferrer' >
               <img src={INSTA} alt="" />
               <span>INSTAGRAM</span>
             </a>
@@ -95,7 +141,9 @@ export default function BuisnessCard() {
         </div>
         <div>
           {WPData?.acf.twitter ?
-            <a href={WPData?.acf.twitter} target="_blank" rel='noreferrer' >
+            <a href={WPData?.acf.twitter}
+              target="_blank"
+              rel='noreferrer' >
               <img src={TWIT} alt="" />
               <span>TWITTER</span>
             </a>
@@ -104,7 +152,9 @@ export default function BuisnessCard() {
         </div>
         <div>
           {WPData?.acf.website ?
-            <a href={WPData?.acf.website} target="_blank" rel='noreferrer' >
+            <a href={WPData?.acf.website}
+              target="_blank"
+              rel='noreferrer' >
               <img src={FB} alt="" />
               <span>WEBSITE</span>
             </a>
@@ -113,7 +163,9 @@ export default function BuisnessCard() {
         </div>
         <div>
           {WPData?.acf.youtube ?
-            <a href={WPData?.acf.youtube} target="_blank" rel='noreferrer' >
+            <a href={WPData?.acf.youtube}
+              target="_blank"
+              rel='noreferrer' >
               <img src={YT} alt="" />
               <span>YOUTUBE</span>
             </a>
@@ -121,8 +173,12 @@ export default function BuisnessCard() {
           }
         </div>
       </BusSocials>
-      {WPData?.acf.latitude ?
-        <MapBox data={[{ key: WPData?.title.rendered, lat: Number(WPData?.acf.latitude), lng: Number(WPData?.acf.longitude) }]} >
+      {WPData?.acf.latitude
+        ? <MapBox data={[{
+          key: WPData?.title.rendered,
+          lat: Number(WPData?.acf.latitude),
+          lng: Number(WPData?.acf.longitude)
+        }]} >
         </MapBox>
         : <h1>Loading...</h1>}
     </BCardWrapper >

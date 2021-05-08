@@ -2,6 +2,10 @@ import axios from 'axios';
 import React from 'react'
 import { useQuery } from 'react-query';
 import { useWPPostStore } from '../api/store';
+import { PageBreakAlt } from '../style/Components';
+import PageBreakOne from '../asset/img/page_break_one.png'
+import EctTitleCard from '../model/EctTitleCard';
+import { NewsfeedWrapper } from '../style/Wrapper';
 
 export default function News() {
   const WPPost = useWPPostStore(state => state.someData)
@@ -23,12 +27,24 @@ export default function News() {
 
   return (
     <div>
-      {WPPost.map((post) => (
-        <>
-          <h2>{post?.title.rendered}</h2>
-          <p>{post?.acf?.description ? post?.acf?.description : updateDB}</p>
-        </>
-      ))}
+      <PageBreakAlt>
+        {/* TODO Adjust the size of the pagebreaks */}
+        {/* TODO make asset pack for pagebreaks */}
+        <img src={PageBreakOne} alt="Page Break" />
+      </PageBreakAlt>
+      <EctTitleCard name='Newsfeed' styles='aRed' bStyles='bTeal' />
+      <>
+        {WPPost.map((post) => (
+          <NewsfeedWrapper>
+            <h2>{post?.title.rendered}</h2>
+            <p>{post?.acf?.description ? post?.acf?.description : updateDB}</p>
+            <br />
+            <br />
+            <br />
+            <hr />
+          </NewsfeedWrapper>
+        ))}
+      </>
     </div>
   )
 }

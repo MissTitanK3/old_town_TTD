@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { useWPEventStore } from '../api/store'
 
 // Stylesheet
-import { CalendarWrapper, EventsDetailsWrap } from '../style/Wrapper';
+import { CalendarWrapper, EventsDetailsWrap, EventsCalWrapper, OldeCalWrapper } from '../style/Wrapper';
 import 'react-calendar/dist/Calendar.css';
 import { DateCard, DateDetails } from '../style/Components'
 
@@ -35,77 +35,86 @@ export default function OldeCalendar() {
     })
     setFilteredData([preCheck])
   };
+  console.log(value)
   return (
-    <>
-      <CalendarWrapper>
-        {/* TODO day disapears after clicked */}
-        {/* TODO figure out how to display none when no events are on a day */}
-        <Calendar
-          className='calendar'
-          onChange={onChange}
-          value={value}
-          onClickDay={showEvents}
-          calendarType='US'
-          showNeighboringMonth={false}
-          prev2Label={false}
-          next2Label={false}
-        />
-      </CalendarWrapper>
-      <div className='details'>
-        {
-          filteredData.length > 0
-            ?
-            filteredData[0]?.map((event, key) => {
-              let dateInfo = event?.acf?.event_date_long.split(re)
-              return (
-                <Link to={`/events-card/${key}`} key={event.id}>
-                  <EventsDetailsWrap>
-                    <DateCard>
-                      <h4>{dateInfo ? dateInfo[4].toString().toUpperCase() : null}</h4>
-                      <br />
-                      <span>{dateInfo ? dateInfo[7] : null}</span>
-                      <br />
-                      <p>{dateInfo ? dateInfo[1] : null}</p>
-                    </DateCard>
-                    <DateDetails>
-                      <h3>{event?.acf?.event_name}</h3>
-                      <br />
-                      <div>
-                        <span>&nbsp;{event?.acf?.event_date_short.slice(-13).trim()}</span>
-                        <p >{event?.acf?.location}</p>
-                      </div>
-                    </DateDetails>
-                  </EventsDetailsWrap>
-                </Link>
-              )
-            })
-            :
-            WPEvent.map((event, key) => {
-              let dateInfo = event.acf.event_date_long.split(re)
-              return (
-                <Link to={`/events-card/${key}`} key={event.id}>
-                  <EventsDetailsWrap>
-                    <DateCard>
-                      <h4>{dateInfo[4].toString().toUpperCase()}</h4>
-                      <br />
-                      <span>{dateInfo[7]}</span>
-                      <br />
-                      <p>{dateInfo[1]}</p>
-                    </DateCard>
-                    <DateDetails>
-                      <h3>{event?.acf?.event_name}</h3>
-                      <br />
-                      <div>
-                        <span>&nbsp;{event?.acf?.event_date_short.slice(-13).trim()}</span>
-                        <p >{event?.acf?.location}</p>
-                      </div>
-                    </DateDetails>
-                  </EventsDetailsWrap>
-                </Link>
-              )
-            })
-        }
+    <OldeCalWrapper>
+      <div>
+        <h5>{value.toDateString()}</h5>
+        <hr />
       </div>
-    </>
+      <EventsCalWrapper>
+        <CalendarWrapper>
+          {/* TODO day disapears after clicked */}
+          {/* TODO figure out how to display none when no events are on a day */}
+          <Calendar
+            className='calendar'
+            onChange={onChange}
+            value={value}
+            onClickDay={showEvents}
+            calendarType='US'
+            showNeighboringMonth={false}
+            prev2Label={false}
+            next2Label={false}
+          />
+        </CalendarWrapper>
+        <div className='details'>
+          {
+            filteredData.length > 0
+              ?
+              filteredData[0]?.map((event, key) => {
+                let dateInfo = event?.acf?.event_date_long.split(re)
+                return (
+                  <Link to={`/events-card/${key}`} key={event.id}>
+                    <EventsDetailsWrap>
+                      <DateCard>
+                        <h4>{dateInfo ? dateInfo[4].toString().toUpperCase() : null}</h4>
+                        <br />
+                        <span>{dateInfo ? dateInfo[7] : null}</span>
+                        <br />
+                        <p>{dateInfo ? dateInfo[1] : null}</p>
+                      </DateCard>
+                      <DateDetails>
+                        <h3>{event?.acf?.event_name}</h3>
+                        <br />
+                        <div>
+                          <span>&nbsp;{event?.acf?.event_date_short.slice(-13).trim()}</span>
+                          <p >{event?.acf?.location}</p>
+                        </div>
+                      </DateDetails>
+                    </EventsDetailsWrap>
+                    <hr />
+                  </Link>
+                )
+              })
+              :
+              WPEvent.map((event, key) => {
+                let dateInfo = event.acf.event_date_long.split(re)
+                return (
+                  <Link to={`/events-card/${key}`} key={event.id}>
+                    <EventsDetailsWrap>
+                      <DateCard>
+                        <h4>{dateInfo[4].toString().toUpperCase()}</h4>
+                        <br />
+                        <span>{dateInfo[7]}</span>
+                        <br />
+                        <p>{dateInfo[1]}</p>
+                      </DateCard>
+                      <DateDetails>
+                        <h3>{event?.acf?.event_name}</h3>
+                        <br />
+                        <div>
+                          <span>&nbsp;{event?.acf?.event_date_short.slice(-13).trim()}</span>
+                          <p >{event?.acf?.location}</p>
+                        </div>
+                      </DateDetails>
+                    </EventsDetailsWrap>
+                    <hr />
+                  </Link>
+                )
+              })
+          }
+        </div>
+      </EventsCalWrapper>
+    </OldeCalWrapper>
   );
 }

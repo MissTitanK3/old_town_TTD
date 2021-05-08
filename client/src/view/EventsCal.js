@@ -9,7 +9,7 @@ import PiannoGirl from '../asset/img/pianno_girl.png'
 import PageBreakOne from '../asset/img/page_break_one.png'
 
 // Stylesheet
-import { FECardWrapper } from '../style/Wrapper';
+import { AltFECardWrapper } from '../style/Wrapper';
 import FECard from '../model/FECard';
 import { Discover, EventDetails, GreenBtn, PageBreakAlt } from '../style/Components';
 import EctTitleCard from '../model/EctTitleCard';
@@ -30,7 +30,7 @@ export default function EventsCal() {
           <GreenBtn>Submit An Event</GreenBtn>
         </Link>
       </EventDetails>
-      <FECardWrapper>
+      <AltFECardWrapper>
         {/* TODO make this dynamic with event data */}
         <h2>FEATURED EVENTS</h2>
         <div>
@@ -59,7 +59,7 @@ export default function EventsCal() {
             accent='aGreen'
           />
         </div>
-      </FECardWrapper>
+      </AltFECardWrapper>
       <OldeCalendar />
     </div>
   )

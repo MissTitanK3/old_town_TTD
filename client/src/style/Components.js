@@ -698,80 +698,90 @@ margin-top: 15px;
 `
 
 export const FECards = styled.div`
-div {
-  
+  height: 400px;
+  width: 400px;
+  img {
+    width: 325px;
+    padding: 25px;
+  }
+  span {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: -30px;
+  }
+  .bBlue {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #55C4CA;
+  }
+  .bOran {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #E7C57F;
+    
+  }
+  .bGreen {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #CBE18C;
+    
+  }
+  .aBlue {
+    background-color: #3C4981;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
+    position: absolute;
+    bottom: -25px;
+    right: -5px;
+    z-index: 20;
+  }
+  .aRed {
+    background-color: #F40707;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
+    position: absolute;
+    bottom: -25px;
+    right: -5px;
+    z-index: 20;
+  }
+  .aGreen {
+    background-color: #048A81;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
+    position: absolute;
+    bottom: -25px;
+    right: -5px;
+    z-index: 20;
+  }
+@media only screen and (min-width: 884px) {
+  height: 400px;
+  width: 400px;
+  img {
+    width: 325px;
+    padding: 25px;
+  }
+  span {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: -30px;
+  }
 }
-height: 400px;
-width: 400px;
-img {
-  width: 325px;
-  padding: 25px;
-}
-span {
-  font-size: 45px;
-  font-weight: 900;
-  margin-bottom: -30px;
-}
-.bBlue {
-margin: auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position: relative;
-background-color: #55C4CA;
-}
-.bOran {
-margin: auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position: relative;
-background-color: #E7C57F;
-
-}
-.bGreen {
-margin: auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position: relative;
-background-color: #CBE18C;
-
-}
-.aBlue {
-  background-color: #3C4981;
-  height: 100%;
-  width: 100%;
-  clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
-  position: absolute;
-  bottom: -25px;
-  right: -5px;
-  z-index: 20;
-}
-.aRed {
-  background-color: #F40707;
-  height: 100%;
-  width: 100%;
-  clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
-  position: absolute;
-  bottom: -25px;
-  right: -5px;
-  z-index: 20;
-}
-.aGreen {
-  background-color: #048A81;
-  height: 100%;
-  width: 100%;
-  clip-path: polygon(5% 75%, 5% 95%, 100% 95%, 100% 100%, 0 100%, 0% 75%);
-  position: absolute;
-  bottom: -25px;
-  right: -5px;
-  z-index: 20;
-}
-`
+  `
 export const FECardsDetails = styled.div`
 width: 70%;
 height: 30%;
@@ -840,4 +850,183 @@ div {
   left: 0;
   height: 30px;
 }
+`
+
+
+export const EventDetailHeader = styled.div`
+padding: 25px;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+/* TODO something is overriding this when navigating to page */
+border: 1px solid green;
+width: 900px;
+max-width: 900px;
+font-size: 1.2em;
+img {
+  width: 400px;
+}
+h1 {
+  font-size: 70px;
+  margin-bottom: 2px;
+}
+span {
+  font-size: 30px;
+}
+`
+export const EventDetailPage = styled.div`
+width: 950px;
+background-color: #CBE18C;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+font-size: 30px;
+span {
+  font-size: 35px;
+
+}
+`
+
+export const EventTitleCard = styled.div`
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 35px;
+font-weight: bolder;
+background-color: #E7C57F;
+top: -70px;
+left: -81px;
+height: 55px;
+width: 225px;
+margin-bottom: -20px;
+z-index: 0;
+.aRed {
+  background-color: #F40707;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  clip-path: polygon(95% 15%, 100% 15%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  position: absolute;
+  top: 5px;
+  left: 93px;
+  z-index: -20;
+}
+`
+
+export const EventDesc = styled.div`
+border: 1px solid blue;
+margin: 150px 0;
+width: 950px;
+font-size: 30px;
+`
+
+export const EventBtn = styled.div`
+height: 100px;
+width: 950px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #313A64;
+a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: #E97924;
+  font-size: 15px;
+  font-weight: bolder;
+  &:hover {
+    background-color: #E9792490;
+    color: white;
+    cursor: pointer;
+  }
+}
+`
+
+export const AboutImg = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px 0;
+background-color: #313A64;
+position: relative;
+z-index: 0;
+margin-bottom: 100px;
+img {
+  width: 100%;
+  z-index: 1;
+}
+h2 {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  font-size: 55px;
+  background-color: #55C4CA;
+  width: 700px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.aOrange {
+  background-color: #F40707;
+  height: 80px;
+  width: 500px;
+  margin: auto;
+  clip-path: polygon(97% 15%, 100% 15%, 100% 100%, 20% 100%, 20% 83%, 97% 83%);
+  position: absolute;
+  bottom: -30px;
+  left: 205px;
+  z-index: 4;
+}
+`
+
+export const AboutIntro = styled.div`
+font-size: 55px;
+font-weight: bolder;
+width: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+text-align: center;
+padding: 100px 0;
+`
+
+export const AboutTxtBody = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #E7C57F;
+img {
+  width: 600px;
+  display: flex;
+  align-items: center;
+}
+p {
+  display: flex;
+  align-items: center;
+  background-color: #378CAB;
+  height: 775px;
+  color: white;
+  font-size: 47px;
+  text-align: right;
+  line-height: 1.2;
+  padding: 25px 15px 25px 125px;
+}
+`
+
+export const AboutTitle = styled.div`
+background-color: #E7C57F;
+height: 100%;
+margin-bottom: -110px;
+font-size: 55px;
+text-align: center;
+color: #313A64;
 `

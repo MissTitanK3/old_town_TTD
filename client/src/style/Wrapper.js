@@ -337,6 +337,9 @@ margin: 35px 0;
 span {
   width: 100%;
 }
+.bTan {
+  background-color: #E7C57F
+}
 .aRed {
   background-color: #313A64;
   height: 100%;
@@ -677,6 +680,7 @@ hr {
 `
 
 export const FECardWrapper = styled.div`
+@media only screen and (min-width: 884px) {
 margin: 250px 0;
 display: flex;
 flex-direction: column;
@@ -696,8 +700,31 @@ hr {
   background-color: black;
   border: none;
   margin: 200px 0 -200px 0;
-
 }
+}
+`
+export const AltFECardWrapper = styled.div`
+margin: 0px 0 250px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+h2 {
+font-weight: bolder;
+font-size: 55px;
+}
+div {
+display: flex;
+margin: 15px;
+}
+hr {
+  width: 70%;
+  height: 3px;
+  background-color: black;
+  border: none;
+  margin: 200px 0 -200px 0;
+}
+/* } */
 `
 
 export const CalendarWrapper = styled.div`
@@ -710,4 +737,74 @@ export const EventsDetailsWrap = styled.div`
 display: flex;
 justify-content: left;
 align-items: center;
+padding: 50px 0;
+hr {
+  border: 4px solid black;
+}
+`
+
+export const NewsfeedWrapper = styled.div`
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+margin: 60px;
+h2 {
+  font-size: 55px;
+  text-decoration: underline;
+}
+p {
+font-size: 30px;
+  max-width: 1200px;
+}
+hr {
+  background-color: black;
+  height: 2px;
+  border: none;
+}
+`
+
+export const OldeCalWrapper = styled.div`
+background-color: #83CFCB;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+text-align: left;
+h5 {
+  font-size: 75px;
+  padding-left: 155px;
+  margin: 50px;
+}
+hr {
+  background-color: black;
+  height: 2px;
+  border: none;
+  width: 90%;
+}
+`
+export const EventsCalWrapper = styled.div`
+background-color: #83CFCB;
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-evenly;
+padding: 150px 50px 150px 50px;
+a{
+  color: black;
+  text-decoration: none;
+}
+`
+
+export const EventSingleCardWrapper = styled.div`
+border: 1px solid yellow;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+export const AboutWrapper = styled.div`
+border: 1px solid green;
+`
+
+export const AboutDetailsWrapper = styled.div`
+border: 1px solid blue;
 `

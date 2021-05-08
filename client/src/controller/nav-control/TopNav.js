@@ -46,11 +46,11 @@ export default function TopNav() {
                 News
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/contact'>
                 Contact Us
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div>
           </div>

@@ -10,9 +10,9 @@ import About from './view/About'
 import Events from './view/Events';
 import Directory from './view/Directory';
 import News from './view/News';
-import ContactUs from './view/ContactUs';
-import Covid19 from './view/Covid19';
-import Shop from './view/Shop';
+// import ContactUs from './view/ContactUs';
+// import Covid19 from './view/Covid19';
+// import Shop from './view/Shop';
 import ForOhFour from './view/NotFound'
 
 // Components
@@ -33,12 +33,12 @@ function App() {
         <Route path='/directory' component={Directory} />
         <Route path='/news' component={News} />
         <Route path='/about' component={About} />
-        <Route path='/events-card' component={EventSingleCard} />
+        <Route path='/events-card/:id' component={EventSingleCard} />
         <Route path='/events-calendar' component={EventsCal} />
         <Route path='/events' component={Events} />
-        <Route path='/contact' component={ContactUs} />
-        <Route path='/covid19' component={Covid19} />
-        <Route path='/shop' component={Shop} />
+        {/* <Route path='/contact' component={ContactUs} /> */}
+        {/* <Route path='/covid19' component={Covid19} /> */}
+        {/* <Route path='/shop' component={Shop} /> */}
         <Route path='*' component={ForOhFour} />
       </Switch>
       <FooterNav />

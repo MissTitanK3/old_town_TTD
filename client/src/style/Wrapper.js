@@ -45,7 +45,7 @@ background-color: #048A81;
 
 .NoBack {
   /* TODO When changing background, update this */
-  background-color: slategrey;
+  background-color: white;
 }
 
 }
@@ -154,12 +154,11 @@ a {
   }
 }
 span {
-  font-size: 30px;
+  font-size: 16px;
   text-align: center;
 }
 
 @media only screen and (min-width: 884px) {
-/* TODO isse between 884 and 922 vw */
 width: 100vw;
 margin: 15px 0;
 img {
@@ -172,7 +171,7 @@ div {
   }
 }
 span {
-  font-size: 26px;
+  font-size: 23px;
 }
 }
 `
@@ -185,7 +184,6 @@ justify-content: center;
 align-items: center;
 `
 export const AbsTitleWrap = styled.div`
-/* TODO bug with VW mobile */
 background-color: #378CAB;
 font-size: 1.5rem;
 font-weight: 900;
@@ -241,7 +239,6 @@ span {
 `
 
 export const AltTitleWrap = styled.div`
-/* TODO bug with VW mobile */
 background-color: #E97924;
 font-size: 1.5rem;
 font-weight: 900;
@@ -323,7 +320,6 @@ span {
 `
 
 export const EctTitleWrap = styled.div`
-/* TODO bug with VW mobile */
 background-color: #E7C57F;
 font-size: 1.5rem;
 font-weight: 900;
@@ -828,18 +824,24 @@ export const AboutDetailsWrapper = styled.div`
 
 export const AboutBoardWrapper = styled.div`
 background-color: #55C4CA;
-padding-bottom: 50px;
+margin: 35px 0;
+padding: 15px 0;
 h4 {
-  font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 45px auto;
+
+}
+@media only screen and (min-width: 884px) {
+padding-bottom: 50px;
+h4 {
+  font-size: 35px;
   width: 1100px;
-  margin: auto;
   padding: 25px;
 }
-
+}
 `
 
 export const AboutPositionsWrapper = styled.div`
@@ -854,14 +856,18 @@ export const AboutInvolvedWrapper = styled.div`
 `
 export const AboutDocWrapper = styled.div`
 display: flex;
-font-size: 35px;
+flex-direction: column;
 justify-content: center;
 align-items: center;
-margin: 55px auto;
-padding: 25px 0;
-div {
-  width: 100%;
-  height: 400px;
+@media only screen and (min-width: 884px) {
+  flex-direction: row;
+  font-size: 35px;
+  margin: 55px auto;
+  padding: 25px 0;
+  div {
+    width: 100%;
+    height: 400px;
+  }
 }
 `
 

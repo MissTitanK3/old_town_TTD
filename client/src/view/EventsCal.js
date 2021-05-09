@@ -25,7 +25,6 @@ export default function EventsCal() {
       </PageBreakAlt>
       <EctTitleCard name='Events Calendar' styles='aTeal' />
       <AltFECardWrapper>
-        {/* TODO make this dynamic with event data */}
         <h2>FEATURED EVENTS</h2>
         <div>
           <FECard

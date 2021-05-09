@@ -10,7 +10,6 @@ export default function FECard(props) {
           <span>{props.title}</span>
           <p> {props.dates} </p>
         </FECardsDetails>
-        {/* TODO Is this okay, or full width on bottom mandatory */}
         <div className={props.accent} />
       </div>
     </FECards>

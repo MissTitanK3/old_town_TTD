@@ -14,7 +14,6 @@ import NLForm from '../NLForm'
 export default function FooterNav() {
   return (
     <div>
-      {/* TODO add links */}
       <div>
         <NLForm />
       </div>
@@ -29,16 +28,17 @@ export default function FooterNav() {
         </div>
         <div>
           <ul>
-            <li><Link to='/covid19'>Covid Respones</Link></li>
+            {/* <li><Link to='/covid19'>Covid Respones</Link></li>
+            <li><Link to='/shop'>Shop</Link></li> */}
             <li><Link to='/about'>About Olde Town Arvada</Link></li>
-            <li><Link to='/shop'>Shop</Link></li>
+            <li><Link to='/directory'>Business Directory</Link></li>
           </ul>
         </div>
         <div>
           <ul>
-            <li><Link to='/directory'>Business Directory</Link></li>
             <li><Link to='/events'>Events</Link></li>
-            <li><Link to='/contact'>Contact Us</Link></li>
+            <li><Link to='/newsfeed'>Newsfeed</Link></li>
+            {/* <li><Link to='/contact'>Contact Us</Link></li> */}
           </ul>
         </div>
       </DetailsWrap>
@@ -46,7 +46,6 @@ export default function FooterNav() {
         <span>FOLLOW US ON YOUR FAVORITE SOCIAL MEDIA SITES!</span>
         <br />
         <div>
-
           <a href='https://www.instagram.com/oldetownarvadaco/' target="_blank" rel="noopener noreferrer">
             <img src={Insta} alt="Instagram Logo" />
             <span>INSTAGRAM</span>

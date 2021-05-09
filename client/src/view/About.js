@@ -114,6 +114,7 @@ export default function About() {
               <span>
                 <Link to='/'>Complete the Electronic Application</Link>
               </span>
+              <br />
               <span>
                 <Link to='/'>Download the Application as a PDF</Link>
               </span>
@@ -121,7 +122,6 @@ export default function About() {
             <div className="download">
             </div>
             <div className="email">
-              {/* TODO Figure out how to format link within p tag */}
               <p>-Email your completed form to &nbsp;{infoLink} </p>
             </div>
           </div>

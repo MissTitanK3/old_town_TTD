@@ -22,7 +22,6 @@ export default function OldeCalendar() {
 
 
   const showEvents = (date) => {
-    // TODO Click twice to function
     let preCheck = []
     WPEvent.forEach(e => {
       let selectedDate = date.toString().split(re)

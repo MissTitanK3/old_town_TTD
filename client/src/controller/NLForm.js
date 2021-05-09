@@ -2,7 +2,7 @@ import React from 'react'
 import { StandardBtn } from '../style/Components'
 import { FormWrap } from '../style/Wrapper'
 
-// TODO There is a bunch of code that is commented out because we might want to impliment the API to handle mailchimp
+// There is a bunch of code that is commented out because we might want to impliment the API to handle mailchimp
 export default function NLForm() {
   // const [email, setEmail] = useState('')
   // const [subbed, setSubbed] = useState(false)
@@ -25,8 +25,8 @@ export default function NLForm() {
   return (
     <FormWrap>
       {/* <label>Enter Email Address:</label> */}
-      {/* TODO Get API for email list */}
-      {/* TODO .env for mailchimp const */}
+      {/* Get API for email list */}
+      {/* .env for mailchimp const */}
       <form>
         <h2>Stay In Touch!</h2>
         <div>

@@ -495,7 +495,6 @@ width: 250px;
   font-size: 25px;
   width: 100%;
   height: 100%;
-  /* TODO figure out why this is a different color */
   background-color: #3C4981;
 }
 .dOrange {
@@ -1126,61 +1125,106 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 20px 0;
 background-color: #313A64;
 position: relative;
-z-index: 0;
-margin-bottom: 100px;
 img {
-  width: 100%;
   z-index: 1;
+  width: 100vw;
 }
 h2 {
-  position: absolute;
-  bottom: -70px;
-  left: 0;
-  font-size: 55px;
   background-color: #55C4CA;
-  width: 700px;
-  height: 100px;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
+  bottom: -35px;
+  left: 0;
+  font-size: 25px;
+  width: 200px;
+  height: 50px;
+}
 }
 .aOrange {
   background-color: #E97924;
-  height: 80px;
-  width: 500px;
+  height: 45px;
+  width: 120px;
   margin: auto;
   clip-path: polygon(97% 15%, 100% 15%, 100% 100%, 20% 100%, 20% 83%, 97% 83%);
   position: absolute;
-  bottom: -30px;
-  left: 205px;
+  bottom: -18px;
+  left: 82px;
   z-index: 4;
+}
+@media only screen and (min-width: 884px) {
+padding: 20px 0;
+z-index: 0;
+margin-bottom: 100px;
+img {
+  width: 100%;
+}
+h2 {
+  bottom: -70px;
+  left: 0;
+  font-size: 55px;
+  width: 700px;
+  height: 100px;
+}
+.aOrange {
+  background-color: #E97924;
+  height: 100px;
+  width: 420px;
+  margin: auto;
+  clip-path: polygon(97% 15%, 100% 15%, 100% 100%, 20% 100%, 20% 83%, 97% 83%);
+  position: absolute;
+  bottom: -32px;
+  left: 286px;
+  z-index: 4;
+}
 }
 `
 
 export const AboutIntro = styled.div`
-font-size: 55px;
-font-weight: bolder;
-width: 70%;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: auto;
-text-align: center;
-padding: 100px 0;
+  display: flex;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  padding: 30px 10px;
+  @media only screen and (min-width: 884px) {
+    font-size: 55px;
+    width: 70%;
+    padding: 100px 0;
+}
 `
 
 export const AboutTxtBody = styled.div`
+background-color: red;
+
+img {
+  width: 100vw;
+  opacity: 80%;
+}
+p {
+  display: flex;
+  align-items: center;
+  background-color: #378CAB;
+  position: relative;
+  z-index: 3;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  padding: 25px 5px;
+  margin: -10px 0;
+}
+@media only screen and (min-width: 884px) {
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: red;
 position: relative;
 img {
-  width: 600px;
+  width: 40vw;
   display: flex;
   align-items: center;
   position: relative;
@@ -1190,16 +1234,11 @@ img {
 }
 p {
   display: flex;
-  align-items: center;
-  background-color: #378CAB;
-  height: 775px;
-  color: white;
-  font-size: 47px;
+  height: 50vw;
+  font-size: 1.4rem;
   text-align: right;
   line-height: 1.2;
-  padding: 25px 85px 25px 125px;
-  position: relative;
-  z-index: 3;
+  padding: 25px 85px 25px 75px;
 }
 
 .aTan {
@@ -1213,18 +1252,32 @@ p {
   right: 0;
   z-index: 4;
 }
+}
+@media only screen and (min-width: 1050px) {
+  p {
+    font-size: 1.7em;
+  }
+}
+@media only screen and (min-width: 1410px) {
+  p {
+    font-size: 2.5em;
+  }
+}
 `
 
 export const AboutTitle = styled.div`
-/* TODO move down if the red is too much */
-background-color: #E7C57F;
-height: 100%;
-margin-bottom: -110px;
-font-size: 55px;
-text-align: center;
-color: #313A64;
-position: relative;
-z-index: 5;
+  background-color: #E7C57F;
+  text-align: center;
+  z-index: 5;
+  position: relative;
+  color: #313A64;
+  margin-bottom: -50px;
+  @media only screen and (min-width: 884px) {
+    /* TODO move down if the red is too much */
+    margin-bottom: -110px;
+    height: 100%;
+    font-size: 55px;
+}
 `
 
 export const TintRed = styled.div`
@@ -1237,42 +1290,56 @@ img {
 
 export const AboutPositions = styled.div`
 font-weight: bolder;
-margin: 20px;
 font-size: 20px;
 p {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 75px;
-width: 180px;
-background-color: #3C4981;
-color: white;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  background-color: #3C4981;
+  color: white;
+  height: 55px;
+  width: 200px;
+  padding: 0;
+  margin: 5px;
 }
 span {
   background-color: none;
   display: flex;
   justify-content: center;
+  
+}
+@media only screen and (min-width: 884px) {
+  margin: 20px;
+  p {
   height: 75px;
   width: 180px;
+  margin: 0;
+}
+span {
+  height: 75px;
+  width: 180px;
+}
 }
 `
 
 export const AboutSeatPositions = styled.div`
+@media only screen and (min-width: 884px) {
 display: flex;
 justify-content: center;
 align-items: center;
 margin: 30px 0 5px 0;
+}
 `
 export const AltAboutSeatPositions = styled.div`
+@media only screen and (min-width: 884px) {
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
 align-items: center;
 max-width: 660px;
+}
 `
 
 export const AboutHeaderTitle = styled.div`
@@ -1280,20 +1347,39 @@ export const AboutHeaderTitle = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #E97924;
+  text-align: center;
   color: white;
+@media only screen and (min-width: 884px) {
   font-size: 65px;
   margin: 60px auto;
-  text-align: center;
   width: 70%;
   h2 {
   padding: 0;
   margin: 10px;
   }
+}
 `
 
 export const AboutInvolvedApply = styled.div`
+  text-align: center;
+h3, span, p {
+  padding-left: 10px;
+}
 h3 {
   background-color: #E7C57F;
+  padding: 5px 0 5px 15px;
+
+}
+a {
+  margin: 0;
+  padding: 0;
+  color: #378CAB;
+}
+ul {
+  text-align: left;
+}
+@media only screen and (min-width: 884px) {
+h3 {
   width: 60%;
   font-size: 55px;
   padding: 15px 0 15px 75px;
@@ -1311,22 +1397,19 @@ ul{
   font-size: 35px;
   padding: 15px 0 0 125px;
 }
-a {
-  margin: 0;
-  padding: 0;
-  color: #378CAB;
-}
 .desc {
   display: flex;
   flex-direction: column;
+}
 }
 `
 
 export const AboutDocuments = styled.div`
 div {
-display: flex;
-flex-direction: column;
-padding: 15px 0;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 .budget {
   background-color: #048A8170;
@@ -1338,6 +1421,16 @@ padding: 15px 0;
   background-color: #3C498170;
 }
 h3, a{
-  padding-left: 25px;
+  padding-left: 15px;
+}
+@media only screen and (min-width: 884px) {
+  h3, a{
+    padding-left: 25px;
+  }
+  div {
+display: flex;
+flex-direction: column;
+width: unset;
+}
 }
 `

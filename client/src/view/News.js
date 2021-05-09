@@ -11,7 +11,6 @@ export default function News() {
   const WPPost = useWPPostStore(state => state.someData)
   const addWPPost = useWPPostStore(state => state.addData)
   const updateDB = '<div>Please Update Database</div>'
-  console.log(WPPost)
 
 
   function useBusiness() {
@@ -34,14 +33,13 @@ export default function News() {
       </PageBreakAlt>
       <EctTitleCard name='Newsfeed' styles='aRed' bStyles='bTeal' />
       <>
-        {WPPost.map((post) => (
-          <NewsfeedWrapper>
+        {WPPost.map((post, index) => (
+          <NewsfeedWrapper key={index}>
             <h2>{post?.title.rendered}</h2>
             <p>{post?.acf?.description ? post?.acf?.description : updateDB}</p>
             <br />
             <br />
             <br />
-            <hr />
           </NewsfeedWrapper>
         ))}
       </>

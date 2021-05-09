@@ -95,7 +95,7 @@ export default function About() {
               </AboutPositions>
             </AltAboutSeatPositions>
           </AboutPositionsWrapper>
-          <h4>The BID Board generally meets on the 4th Tuesday of each month. During the holidays, meetings may be changed to accommodate the calendar. Special meetings may be held throughout the year. All board and special meetings are open to the public. Meeting agendas with meeting locations are posted in kiosk in the Olde Town Square, Olde Wadsworth & 57th Street or in the resources below.</h4>
+          <h4>The BID Board generally meets on the 4th Tuesday of each month. During the holidays, meetings may be changed to accommodate the calendar. Special meetings may be held throughout the year. All board and special meetings are open to the public. Meeting agendas with meeting locations are posted online at least 24 hours in advance.</h4>
         </div>
       </AboutBoardWrapper>
       <AboutInvolvedWrapper>
@@ -107,7 +107,7 @@ export default function About() {
             <h3>Apply to be a member of the BID Board!</h3>
           </div>
           <div className="desc">
-            <span>The BID Board is currently accepting application for condideration. Please submit your application by March 17th, 2021 to be considered for andy 2021 Board vacancies</span>
+            <span>Those seeking to join the Board can fill out an application at any time. Applications for open Board positions will be reviewed annually at the March Board meeting, or on a as needed basis. To be considered, applications should be submitted by March 15th.</span>
           </div>
           <div className="links">
             <div className="eapp">
@@ -129,18 +129,27 @@ export default function About() {
         <AboutInvolvedApply>
           <h3>Join a Subcommittee!</h3>
           <div className="email">
-            <span>Send us an email at&nbsp;{infoLink}  to let us know you are interested.
+            <span>The BID sub-committees are open to everyone. Subcommittees meet monthly to assist and advise in executing the goals of the annual operating plan. The current sub-committees include:
             </span>
+            <ul>
+              <li>Events Subcommittee</li>
+              <li>Marketing Subcommittee</li>
+              <li>Placemaking Subcommittee</li>
+              <li>Safety Subcommittee</li>
+            </ul>
+            <p>
+              If you are interested in joining a subcommittee, please send us an email:
+            </p>
+            <span>{infoLink}</span>
           </div>
         </AboutInvolvedApply>
         <AboutInvolvedApply>
           <h3>Volunteer for Olde Town Events!</h3>
           <div className="email">
-            <span>Send us an email at&nbsp;
-              <Link>
-                info@oldetownarvada.org
-              </Link>
-              to let us know you are interested.</span>
+            <p>
+              If you are interested in joining a subcommittee, please send us an email:
+            </p>
+            <span>{infoLink}</span>
           </div>
         </AboutInvolvedApply>
       </AboutInvolvedWrapper>
@@ -171,7 +180,6 @@ export default function About() {
             <Link to='/'>2019 Committee Meetings</Link>
             <Link to='/'>2018 Committee Meetings</Link>
           </div>
-
         </AboutDocuments>
       </AboutDocWrapper>
     </AboutWrapper>

@@ -21,6 +21,8 @@ export default function Directory() {
   const [filtered, setFiltered] = useState('all')
   const WPData = useWPDataStore(state => state.someData)
   const addWPData = useWPDataStore(state => state.addData)
+  const setfilteredData = useWPDataStore(state => state.setfilteredData)
+  const addFilteredWPData = useWPDataStore(state => state.addFilteredData)
   let mapData = []
 
   function useBusiness() {
@@ -29,6 +31,7 @@ export default function Directory() {
         "https://oldetownarvada.org/wp-json/wp/v2/businessdirectory/"
       );
       addWPData(data)
+      setfilteredData(false)
     });
   }
   // TODO this doesnt work in a useEffect, debug
@@ -41,6 +44,8 @@ export default function Directory() {
         newArr.push(data[i])
       }
     }
+    setfilteredData(true)
+    addFilteredWPData(newArr)
     return results(newArr)
   }
 
@@ -48,6 +53,7 @@ export default function Directory() {
     try {
       mapData.push(data)
       let values = data.map((bus, index) => (
+        // TODO this doesnt pull from filtered array, pulls from original one
         <Link to={`/directory/${index}`} key={bus.id} >
           <strong>
             {bus.title.rendered}
@@ -90,7 +96,7 @@ export default function Directory() {
           <img src={PageBreakOne} alt="Page Break" />
         </PageBreakAlt>
         <AltTitleCard name='Directory' styles='aBlue' />
-        <Discover>Discover the best of <strong> &nbsp; Olde Town</strong></Discover>
+        <Discover>Get to Know the Neighborhood</Discover>
       </div>
       <FilterWrapper>
         <FilterCard onClick={() => setFiltered('food')} >

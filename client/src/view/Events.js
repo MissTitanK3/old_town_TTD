@@ -38,7 +38,7 @@ export default function Events() {
         <img src={PageBreakOne} alt="Page Break" />
       </PageBreakAlt>
       <EctTitleCard name='Events' styles='aTeal' />
-      <Discover>Want the latest info on what's happening in Olde Town? Find something for everyone, this serves as your 'what to do' hub!</Discover>
+      <Discover>Heading to Olde Town? We want to make sure you're in the loop! Check out our Events Calendar to see all that is happening!</Discover>
       <EventsCardWrapper>
         <EventsCard
           accent='aLime'
@@ -46,7 +46,7 @@ export default function Events() {
           img={PiannoGirl}
           alt='Pianno Girl'
           title='EVENTS CALENDAR'
-          desc="Planning an event in Olde Town? Tell us the details and we'll get your event added to the community calendar!"
+          desc="From signature Olde Town events to live music, retail specials, and more, there is always something to do in Olde Town!"
           btn='GO TO CALENDAR'
           dest='/events-calendar'
         />
@@ -57,7 +57,7 @@ export default function Events() {
           img={PiannoGirl}
           alt='Pianno Girl'
           title='SUBMIT AN EVENT'
-          desc="Planning an event in Olde Town?"
+          desc="Planning an event in Olde Town? Tell us the details and we’ll get your event added to the community calendar!"
           btn='SUBMIT AN EVENT'
           dest='/events-calendar'
         />
@@ -79,7 +79,7 @@ export default function Events() {
           img={PiannoGirl}
           alt='Pianno Girl'
           title='VENDOR REGISTRATION'
-          desc="Want to register as a vendor? Click here to fill out the form!"
+          desc="Interested in receiving info about vending at an Olde Town event? Click here to be added to our vendor email list!"
           // TODO Modal or new page?
           btn='GO TO FORM'
           dest='/events-calendar'

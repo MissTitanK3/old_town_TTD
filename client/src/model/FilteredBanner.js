@@ -4,7 +4,6 @@ import { FilterBanner } from '../style/Components'
 export default function FilteredBanner(props) {
 
   function bannerColor(key) {
-    console.log(key)
     switch (key) {
       case 'Food & Drink':
         return "dBlue"
@@ -21,9 +20,7 @@ export default function FilteredBanner(props) {
       default:
         break;
     }
-
   }
-  console.log(bannerColor(props.text))
   return (
     <div>
       {/* TODO figure out why classname isnt working in components stylesheet */}

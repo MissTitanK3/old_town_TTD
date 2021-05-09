@@ -24,12 +24,6 @@ export default function EventsCal() {
         <img src={PageBreakOne} alt="Page Break" />
       </PageBreakAlt>
       <EctTitleCard name='Events Calendar' styles='aTeal' />
-      <Discover>Planning an event in Olde Town? Give us the details and we’ll get your event added to the calendar!</Discover>
-      <EventDetails>
-        <Link to='/'>
-          <GreenBtn>Submit An Event</GreenBtn>
-        </Link>
-      </EventDetails>
       <AltFECardWrapper>
         {/* TODO make this dynamic with event data */}
         <h2>FEATURED EVENTS</h2>
@@ -61,6 +55,12 @@ export default function EventsCal() {
         </div>
       </AltFECardWrapper>
       <OldeCalendar />
+      <Discover>Planning an event in Olde Town? Give us the details and we’ll get your event added to the calendar!</Discover>
+      <EventDetails>
+        <Link to='/'>
+          <GreenBtn>Submit An Event</GreenBtn>
+        </Link>
+      </EventDetails>
     </div>
   )
 }

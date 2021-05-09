@@ -324,7 +324,7 @@ span {
 
 export const EctTitleWrap = styled.div`
 /* TODO bug with VW mobile */
-background-color: #E97924;
+background-color: #E7C57F;
 font-size: 1.5rem;
 font-weight: 900;
 height: 75px;
@@ -345,10 +345,10 @@ span {
   height: 100%;
   width: 60%;
   margin: auto;
-  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
+  clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 87%, 95% 87%);
   position: absolute;
   top: 5px;
-  left: 107px;
+  left: 87px;
   z-index: -20;
 }
 .aBlue {
@@ -359,7 +359,7 @@ span {
   clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
   position: absolute;
   top: 5px;
-  left: 107px;
+  left: 87px;
   z-index: -20;
 }
 .aTeal {
@@ -370,7 +370,7 @@ span {
   clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
   position: absolute;
   top: 5px;
-  left: 107px;
+  left: 87px;
   z-index: -20;
 }
 @media only screen and (min-width: 884px) {
@@ -549,9 +549,9 @@ img {
 
 export const WhatsNewWrapper = styled.div`
 display: flex;
-justify-content: space-evenly;
+/* justify-content: space-evenly; */
 flex-wrap: wrap;
-margin: 15px;
+margin: 0 15px 15px 150px;
 
 a {
   text-decoration: none;
@@ -664,9 +664,13 @@ justify-content:center;
 export const EventsWrap = styled.div`
 display: flex;
 justify-content: center;
+flex-direction: column;
 align-items: center;
 background-color: #83CFCB;
+@media only screen and (min-width: 884px) {
+  flex-direction: row;
 padding: 100px 0 100px 175px;
+}
 `
 
 export const EventsCardWrapper = styled.div`
@@ -747,19 +751,21 @@ export const NewsfeedWrapper = styled.div`
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
-margin: 60px;
 h2 {
-  font-size: 55px;
   text-decoration: underline;
 }
 p {
-font-size: 30px;
+  padding: 10px;
+}
+@media only screen and (min-width: 884px) {
+margin: 60px;
+h2 {
+  font-size: 55px;
+}
+p {
+  font-size: 30px;
   max-width: 1200px;
 }
-hr {
-  background-color: black;
-  height: 2px;
-  border: none;
 }
 `
 
@@ -844,5 +850,39 @@ padding: 25px 0;
 div {
   width: 100%;
   height: 400px;
+}
+`
+
+export const CarouselWrapper = styled.div`
+height: 100%;
+@media only screen and (min-width: 884px) {
+height: 900px;
+}
+`
+export const CarouselCardWrapper = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+max-height: 800px;
+max-width: 1000px;
+border: 5px solid gray;
+box-shadow: 0px 0px 10px gray;
+border-radius: 5px;
+h2 {
+  font-size: 55px;
+}
+p {
+  font-size: 35px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+@media only screen and (min-width: 884px) {
+img {
+  height: 400px;
+  width: 400px;
+}
 }
 `

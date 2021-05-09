@@ -11,8 +11,12 @@ const settingStore = (set) => ({
   toggleDark: () => set((state) => ({ dark: !state.dark }))
 })
 const WPDataStore = (set) => ({
+  isfilteredData: false,
+  setfilteredData: (newData) => set((state) => ({ isfiltered: newData })),
   someData: [],
-  addData: (newData) => set((state) => ({ someData: newData }))
+  addData: (newData) => set((state) => ({ someData: newData })),
+  filteredData: [],
+  addFilteredData: (newData) => set((state) => ({ filteredData: newData })),
 })
 const WPEventStore = (set) => ({
   someData: [],

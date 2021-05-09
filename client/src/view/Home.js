@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPlayer from 'react-player/lazy';
+// import ReactPlayer from 'react-player/lazy';
 import AbstractCard from '../model/AbstractCard';
 import { CardBar, PageBreak, StandDesc, VideoComp } from '../style/Components';
 import { AbsCardWrap, LongWrapper, WhatsNewWrapper } from '../style/Wrapper';
@@ -7,7 +7,8 @@ import chalkboard from '../asset/img/chalkboard.png';
 import PageBreakOne from '../asset/img/page_break_one.png';
 import OutsideArea from '../asset/img/outside_sitting.png';
 import LongCard from '../model/LongCard';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import OldeCarousel from '../controller/Carousel';
 
 export default function Home() {
 	return (
@@ -15,14 +16,15 @@ export default function Home() {
 			{/* TODO Issue with side scroll */}
 			<VideoComp>
 				{/* TODO update this for selected video */}
-				<ReactPlayer
+				{/* <ReactPlayer
 					width='100vw'
 					height='95vh'
 					url='https://www.youtube.com/watch?v=iy8D7XaxmIM'
 					config={{
 						controls: false,
 					}}
-				/>
+				/> */}
+				<img src="https://oldetownarvada.org/wp-content/uploads/2021/01/Watertower-Heart.jpg" alt="" />
 			</VideoComp>
 			<StandDesc>
 				<h2>Olde Town Arvada, Colorado</h2>
@@ -38,7 +40,7 @@ export default function Home() {
 					Olde Town!
 				</p>
 			</StandDesc>
-			<div>
+			<div style={{height:'800px'}} >
 				<CardBar />
 				<AbsCardWrap>
 					{/* TODO Buggy between 884-1264vw */}
@@ -47,9 +49,9 @@ export default function Home() {
 						alt='Chalboard Storefront'
 						bColor='aqua'
 						aColor='aBlue'
-						desc='SUPPORT LOCAL BUSINESS WITH AN OLDE TOWN ARVADA GIFT CARD'
-						btnWds='VISIT STORE'
-						path='/shop'
+						desc='SEE THE LATEST NEWS IN OLDE TOWN'
+						btnWds='NEWSFEED'
+						path='/news'
 					/>
 					<AbstractCard
 						img={chalkboard}
@@ -80,12 +82,13 @@ export default function Home() {
 						What's <br /> New?
 					</h3>
 				</div>
-				<Link to='/'>
+				{/* <Link to='/'>
 					<div className='dRight'>
 						<p>COVID-19 UPDATES</p>
 					</div>
-				</Link>
+				</Link> */}
 			</WhatsNewWrapper>
+				<OldeCarousel/>
 			<LongWrapper>
 				<LongCard
 					img={OutsideArea}
@@ -99,7 +102,7 @@ export default function Home() {
 					img={OutsideArea}
 					alt='Outside sitting area'
 					labeled='DINE'
-					details="Olde Town offeres one of the Colorado's most unique shopping experiences!"
+					details="Olde Town is home to award winning restaurants, breweries, cafes and more!"
 					accent='red'
 					mid='midBlue'
 				/>
@@ -107,7 +110,7 @@ export default function Home() {
 					img={OutsideArea}
 					alt='Outside sitting area'
 					labeled='MORE'
-					details="Olde Town offeres one of the Colorado's most unique shopping experiences!"
+					details="From massages to fitness to your favorite salon, see everything Olde Town has to offer"
 					accent='blue'
 					mid='midAqua'
 				/>

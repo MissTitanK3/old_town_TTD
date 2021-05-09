@@ -5,12 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import ScrollToTop from './api/ScrollToTop';
+
+
 
 const queryClient = new QueryClient()
 
+
 ReactDOM.render(
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
+    <BrowserRouter >
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </QueryClientProvider>,

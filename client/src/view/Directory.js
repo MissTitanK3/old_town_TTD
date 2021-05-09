@@ -53,7 +53,6 @@ export default function Directory() {
     try {
       mapData.push(data)
       let values = data.map((bus, index) => (
-        // TODO this doesnt pull from filtered array, pulls from original one
         <Link to={`/directory/${index}`} key={bus.id} >
           <strong>
             {bus.title.rendered}

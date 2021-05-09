@@ -23,7 +23,6 @@ export default function FilteredBanner(props) {
   }
   return (
     <div>
-      {/* TODO figure out why classname isnt working in components stylesheet */}
       <FilterBanner className='midOrange' >
         <div className={bannerColor(props.text)}>
           <h2>{props.text}</h2>

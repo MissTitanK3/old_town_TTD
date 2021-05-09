@@ -13,9 +13,7 @@ import OldeCarousel from '../controller/Carousel';
 export default function Home() {
 	return (
 		<div>
-			{/* TODO Issue with side scroll */}
 			<VideoComp>
-				{/* TODO update this for selected video */}
 				{/* <ReactPlayer
 					width='100vw'
 					height='95vh'
@@ -43,7 +41,6 @@ export default function Home() {
 			<div style={{height:'800px'}} >
 				<CardBar />
 				<AbsCardWrap>
-					{/* TODO Buggy between 884-1264vw */}
 					<AbstractCard
 						img={chalkboard}
 						alt='Chalboard Storefront'

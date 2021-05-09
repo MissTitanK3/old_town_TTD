@@ -51,16 +51,16 @@ export default function TemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+
     >
       <div className='exit' onClick={toggleDrawer(anchor, false)}><CloseIcon /></div>
       <List>
-        {['About', 'Events', 'Directory', 'News', 'Contact'].map((text, x) => (
+        {['About', 'Events', 'Directory', 'News'].map((text, x) => (
           < ListItem button key={x} >
-            {/* TODO figure out how to remove the underline */}
-            <Link to={'/' + text.toLowerCase()} >
+            <Link style={{ textDecoration: 'none' }} to={'/' + text.toLowerCase()} >
               <ListItemText primary={text} />
+              <Divider style={{ width: '100vw', border: '1px solid white', backgroundColor: 'white' }} />
             </Link>
-            <Divider />
           </ListItem>
         ))
         }
@@ -70,7 +70,7 @@ export default function TemporaryDrawer() {
 
   return (
     <DrawerWrap>
-      <React.Fragment key={'right'}>
+      <React.Fragment key={'right'} >
         <Button className='NoBack' onClick={toggleDrawer('right', true)}><MenuIcon fontSize='large' color='disabled' /></Button>
         <Drawer anchor='right' open={state['right']} onClose={toggleDrawer('right', false)}>
           {list('right')}

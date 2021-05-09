@@ -80,13 +80,12 @@ export default function Events() {
           alt='Pianno Girl'
           title='VENDOR REGISTRATION'
           desc="Interested in receiving info about vending at an Olde Town event? Click here to be added to our vendor email list!"
-          // TODO Modal or new page?
           btn='GO TO FORM'
           dest='/events-calendar'
         />
       </EventsCardWrapper>
       <FECardWrapper>
-        {/* TODO Pulls the lastest 3 entries */}
+        {/* Pulls the lastest 3 entries */}
         <h2>FEATURED EVENTS</h2>
         <div>
           <FECard

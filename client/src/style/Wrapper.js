@@ -708,6 +708,7 @@ hr {
 }
 `
 export const AltFECardWrapper = styled.div`
+@media only screen and (min-width: 884px) {
 margin: 0px 0 250px 0;
 display: flex;
 flex-direction: column;
@@ -728,7 +729,7 @@ hr {
   border: none;
   margin: 200px 0 -200px 0;
 }
-/* } */
+}
 `
 
 export const CalendarWrapper = styled.div`
@@ -770,15 +771,16 @@ p {
 `
 
 export const OldeCalWrapper = styled.div`
+margin-top: 100px;
 background-color: #83CFCB;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 text-align: left;
 h5 {
-  font-size: 75px;
-  padding-left: 155px;
-  margin: 50px;
+  font-size: 35px;
+  padding-left: 5px;
+  margin: 20px;
 }
 hr {
   background-color: black;
@@ -786,21 +788,31 @@ hr {
   border: none;
   width: 90%;
 }
+@media only screen and (min-width: 884px) {
+h5 {
+  font-size: 75px;
+  padding-left: 155px;
+  margin: 50px;
+}
+}
 `
 export const EventsCalWrapper = styled.div`
-background-color: #83CFCB;
 display: flex;
-flex-direction: row-reverse;
+flex-direction: column;
 justify-content: space-evenly;
-padding: 150px 50px 150px 50px;
+background-color: #83CFCB;
+padding: 5px;
 a{
   color: black;
   text-decoration: none;
 }
+@media only screen and (min-width: 884px) {
+  flex-direction: row-reverse;
+padding: 150px 50px 150px 50px;
+}
 `
 
 export const EventSingleCardWrapper = styled.div`
-border: 1px solid yellow;
 display: flex;
 flex-direction: column;
 justify-content: center;

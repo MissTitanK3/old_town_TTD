@@ -929,40 +929,58 @@ margin-right: -40px;
 `
 
 export const DateCard = styled.div`
-width: 70px;
-height: 65px;
 text-align: center;
-background-color: #C2C6C9;
 position: relative;
-margin: 25px;
+background-color: #C2C6C9;
+width: 90px;
+height: 65px;
+margin: 15px;
 h4 {
-  margin: 0;
-  padding: 3px 0;
   background-color: #3C4981;
   color: white;
+  margin: 0;
+  padding: 5px 0;
 }
 span {
   font-weight: bolder;
-  font-size: 40px;
-  height: 30%;
   position: absolute;
-  top: 20px;
-  left: 18px;
+  font-size: 26px;
+  height: 20%;
+  top: 30px;
+  left: 12px;
   width: 50%;
 }
-p  {
-  margin: 8px;
+p {
   font-weight: bolder;
+  margin: 8px;
+}
+@media only screen and (min-width: 884px) {
+width: 70px;
+margin: 25px;
+h4 {
+  padding: 3px 0;
+}
+span {
+  font-size: 40px;
+  height: 30%;
+  top: 20px;
+  left: 18px;
+}
 }
 `
 export const DateDetails = styled.div`
-font-size: 22px;
 display: flex;
 flex-direction: column;
-width: 400px;
 position: relative;
-h3 {
+width: 100%;
+h3{
 font-weight: bolder;
+}
+
+@media only screen and (min-width: 884px) {
+font-size: 22px;
+width: 400px;
+h3 {
 margin: 0;
 }
 span {
@@ -975,48 +993,53 @@ p {
   height: 25px;
 }
 div {
-  display: flex;
-  justify-content" center;
-  align-items: center;
-  position: absolute;
   top: 40px;
   left: 0;
   height: 30px;
+}
 }
 `
 
 
 export const EventDetailHeader = styled.div`
-padding: 25px;
-display: flex;
-justify-content: space-between;
-align-items: flex-end;
-/* TODO something is overriding this when navigating to page */
-border: 1px solid green;
-width: 900px;
-max-width: 900px;
-font-size: 1.2em;
+padding: 15px;
 img {
-  width: 400px;
+  margin-top: 35px;
+  width: 70vw;
 }
-h1 {
-  font-size: 70px;
-  margin-bottom: 2px;
-}
-span {
-  font-size: 30px;
+@media only screen and (min-width: 884px) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 25px;
+  width: 900px;
+  max-width: 900px;
+  font-size: 1.2em;
+  img {
+    width: 400px;
+  }
+  h1 {
+    font-size: 70px;
+    margin-bottom: 2px;
+  }
+  span {
+    font-size: 30px;
+  }
 }
 `
 export const EventDetailPage = styled.div`
+  background-color: #CBE18C;
+  align-items: center;
+  width: 100vw;
+  span, p {
+    padding-left: 15px;
+  }
+@media only screen and (min-width: 884px) {
 width: 950px;
-background-color: #CBE18C;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
 font-size: 30px;
 span {
   font-size: 35px;
-
+}
 }
 `
 
@@ -1028,8 +1051,8 @@ align-items: center;
 font-size: 35px;
 font-weight: bolder;
 background-color: #E7C57F;
-top: -70px;
-left: -81px;
+top: -35px;
+left: -30px;
 height: 55px;
 width: 225px;
 margin-bottom: -20px;
@@ -1045,38 +1068,56 @@ z-index: 0;
   left: 93px;
   z-index: -20;
 }
+@media only screen and (min-width: 884px) {
+  left: 0;
+}
 `
 
 export const EventDesc = styled.div`
-border: 1px solid blue;
+margin: 120px 0;
+width: 100vw;
+font-size: 20px;
+h3, span {
+  padding-left: 15px;
+}
+@media only screen and (min-width: 884px) {
 margin: 150px 0;
 width: 950px;
 font-size: 30px;
+}
 `
 
 export const EventBtn = styled.div`
-height: 100px;
-width: 950px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #313A64;
-a {
-  text-decoration: none;
-  color: black;
+  background-color: #313A64;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 55px;
+  a {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bolder;
+    background-color: #E97924;
+    padding: 5px;
+    &:hover{
+      background-color: #E9792490;
+      color: white;
+      cursor: pointer;
+
+    }
+  }
+@media only screen and (min-width: 884px) {
+height: 100px;
+width: 950px;
+a {
   width: 200px;
   height: 50px;
-  background-color: #E97924;
   font-size: 15px;
-  font-weight: bolder;
-  &:hover {
-    background-color: #E9792490;
-    color: white;
-    cursor: pointer;
-  }
+}
 }
 `
 

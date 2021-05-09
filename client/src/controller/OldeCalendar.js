@@ -44,8 +44,7 @@ export default function OldeCalendar() {
       </div>
       <EventsCalWrapper>
         <CalendarWrapper>
-          {/* TODO day disapears after clicked */}
-          {/* TODO figure out how to display none when no events are on a day */}
+          {/* TODO talk to Mx about responsive cal @280px */}
           <Calendar
             className='calendar'
             onChange={onChange}

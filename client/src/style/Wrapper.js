@@ -36,20 +36,16 @@ img {
 
 export const DrawerWrap = styled.div`
 background-color: #048A81;
-
 .exit {
   display: flex;
   justify-content: left;
   padding: 10px;
 }
-
 .NoBack {
   /* TODO When changing background, update this */
   background-color: white;
 }
-
 }
-
 div {
   display: flex;
   flex-direction: center;
@@ -60,7 +56,6 @@ span {
   font-size: 2em;
   color: #ffffff;
 }
-
 }
 `
 
@@ -157,7 +152,6 @@ span {
   font-size: 16px;
   text-align: center;
 }
-
 @media only screen and (min-width: 884px) {
 width: 100vw;
 margin: 15px 0;
@@ -408,7 +402,6 @@ span {
   left: 205px;
   z-index: -20;
 }
-
 }
 `
 
@@ -423,7 +416,6 @@ margin: auto;
 img {
   width: 275px;
 }
-
 .aqua {
   height: 70%;
   width: 275px;
@@ -465,7 +457,6 @@ img {
   top: 0px;
   right: 0px;
 }
-
 @media only screen and (min-width: 884px) {
 display: flex;
 justify-content: center;
@@ -479,7 +470,6 @@ img {
   width: 70%;
   align-self: center;
 }
-
 .aqua {
   background-color: #55C4CA;
   margin: auto;
@@ -548,12 +538,10 @@ display: flex;
 /* justify-content: space-evenly; */
 flex-wrap: wrap;
 margin: 0 15px 15px 150px;
-
 a {
   text-decoration: none;
   color: black;
 }
-
 .dLeft {
   display: none;
 }
@@ -567,7 +555,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 h3 {
   background-color: #3C4981;
   width: 350px;
@@ -731,7 +718,6 @@ hr {
 export const CalendarWrapper = styled.div`
 display: flex;
 width: 400px;
-
 `
 
 export const EventsDetailsWrap = styled.div`
@@ -819,7 +805,6 @@ export const AboutWrapper = styled.div`
 `
 
 export const AboutDetailsWrapper = styled.div`
-
 `
 
 export const AboutBoardWrapper = styled.div`
@@ -832,7 +817,6 @@ h4 {
   align-items: center;
   text-align: center;
   margin: 45px auto;
-
 }
 @media only screen and (min-width: 884px) {
 padding-bottom: 50px;
@@ -852,7 +836,6 @@ align-items: center;
 `
 
 export const AboutInvolvedWrapper = styled.div`
-
 `
 export const AboutDocWrapper = styled.div`
 display: flex;

@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import { EventSingleCardWrapper } from '../style/Wrapper'
 import { EventBtn, EventDesc, EventDetailHeader, EventDetailPage, EventTitleCard, PageBreakAlt } from '../style/Components'
 import PageBreakOne from '../asset/img/page_break_one.png'
+import { height } from '@material-ui/system'
 
 export default function EventSingleCard() {
   const { id } = useParams()
@@ -45,7 +46,12 @@ export default function EventSingleCard() {
         </EventDesc>
         <EventDetailPage>
           <div>
-            <EventTitleCard>
+            <EventTitleCard style={{
+              position: 'relative',
+              top: '-60px',
+              left: '0',
+              height: '71px'
+            }} >
               <span>Event Details</span>
               <div className='aRed' />
             </EventTitleCard>

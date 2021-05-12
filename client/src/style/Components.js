@@ -131,11 +131,22 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 position: relative;
-text-align: center;
+text-align: left;
 margin: auto;
 padding-bottom: 15px;
 a {
   text-decoration: none;
+  float: right;
+  /* margin-top:5px; */
+}
+span {
+  display: flex;
+  flex-wrap: wrap;
+  padding:5px 0 0 10px;
+  width: 93%;
+  height: 100%;
+  font-size: 18px;
+
 }
 @media only screen and (min-width: 884px) {
 display: flex;
@@ -147,6 +158,7 @@ position: sticky;
 margin: 15px;
 span {
   display: flex;
+  flex-wrap: unset;
   justify-content: center;
   align-items: flex-end;
   padding:0 0 10px 10px;
@@ -157,6 +169,7 @@ span {
 }
 a {
   text-decoration: none;
+  float: unset;
 }
 }
 `
@@ -340,6 +353,7 @@ align-items: center;
 margin: 5px;
 height: 400px;
 width: 400px;
+
 img {
   display: initial;
   width: 80%;
@@ -375,7 +389,9 @@ background-color: #378CAB;
   :hover{
     color: white;
     cursor: pointer;
+    font-size: 35px;
   }
+
 }
 .dTan {
   display: flex;
@@ -388,6 +404,7 @@ background-color: #378CAB;
   :hover{
     color: white;
     cursor: pointer;
+    font-size: 35px;
   }
 }
 .dGreen {
@@ -401,6 +418,7 @@ background-color: #378CAB;
   :hover{
     color: white;
     cursor: pointer;
+    font-size: 35px;
   }
 }
 .dRed {
@@ -414,6 +432,7 @@ background-color: #378CAB;
   :hover{
     color: white;
     cursor: pointer;
+    font-size: 35px;
   }
 }
 .dPurple {
@@ -427,6 +446,7 @@ background-color: #378CAB;
   :hover{
     color: white;
     cursor: pointer;
+    font-size: 35px;
   }
 }
 .dOrange {
@@ -440,6 +460,7 @@ background-color: #378CAB;
   :hover{
     color: white;
     cursor: pointer;
+    font-size: 35px;
   }
 }
 `
@@ -1027,18 +1048,23 @@ img {
 }
 `
 export const EventDetailPage = styled.div`
-  background-color: #CBE18C;
-  align-items: center;
-  width: 100vw;
-  span, p {
-    padding-left: 15px;
-  }
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+background-color: #CBE18C;
+align-items: center;
+width: 100vw;
+span, p {
+  padding-left: 15px;
+}
 @media only screen and (min-width: 884px) {
+/* flex-direction: row; */
 width: 950px;
 font-size: 30px;
 span {
   font-size: 35px;
 }
+
 }
 `
 
@@ -1273,7 +1299,6 @@ export const AboutTitle = styled.div`
   color: #313A64;
   margin-bottom: -50px;
   @media only screen and (min-width: 884px) {
-    /* TODO move down if the red is too much */
     margin-bottom: -110px;
     height: 100%;
     font-size: 55px;

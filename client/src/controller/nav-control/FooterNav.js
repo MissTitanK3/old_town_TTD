@@ -19,7 +19,7 @@ export default function FooterNav() {
       </div>
       <DetailsWrap>
         <div>
-          <h2>Olde Town Arvada</h2>
+          <h2>Olde Town <br /> Arvada</h2>
           <ul>
             <li className='LinkAlt'>7307 Grandview Ave</li>
             <li className='LinkAlt'>Arvada, CO 80002</li>

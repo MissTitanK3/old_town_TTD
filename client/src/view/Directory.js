@@ -27,10 +27,23 @@ export default function Directory() {
 
   function useBusiness() {
     return useQuery("posts", async () => {
-      const { data } = await axios.get(
-        "https://oldetownarvada.org/wp-json/wp/v2/businessdirectory/"
-      );
-      addWPData(data)
+      const headers = await axios.get("https://oldetownarvada.org/wp-json/wp/v2/businessdirectory")
+      let iterator = ''
+      for (const [key, value] of Object.entries(headers.headers)) {
+        if (key === 'x-wp-totalpages') {
+          iterator = value
+        }
+      }
+      let dataHold = []
+      for (let i = 1; i <= iterator; i++) {
+        const { data } = await axios.get(
+          `https://oldetownarvada.org/wp-json/wp/v2/businessdirectory?per_page=10&page=${i}`
+        );
+        for (let j = 0; j <= data.length - 1; j++) {
+          dataHold.push(data[j])
+        }
+      }
+      addWPData(dataHold)
       setfilteredData(false)
     });
   }
@@ -55,11 +68,12 @@ export default function Directory() {
       let values = data.map((bus, index) => (
         <Link to={`/directory/${index}`} key={bus.id} >
           <strong>
-            {bus.title.rendered}
-            <br />
+            <div dangerouslySetInnerHTML={{ __html: bus.title.rendered }} />
             {bus.acf.phone_number}
           </strong>
-          <br /> </Link >
+          <br />
+          <br />
+        </Link >
       ))
       return values
     } catch (error) {
@@ -85,7 +99,6 @@ export default function Directory() {
         break;
     }
   }
-
   return (
     <>
       {/* TODO add feature to expand card imgages when active */}

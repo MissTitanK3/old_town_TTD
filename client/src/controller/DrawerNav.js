@@ -55,9 +55,9 @@ export default function TemporaryDrawer() {
     >
       <div className='exit' onClick={toggleDrawer(anchor, false)}><CloseIcon /></div>
       <List>
-        {['About', 'Events', 'Directory', 'News'].map((text, x) => (
+        {['Home', 'About', 'Events', 'Directory', 'News'].map((text, x) => (
           < ListItem button key={x} >
-            <Link style={{ textDecoration: 'none' }} to={'/' + text.toLowerCase()} >
+            <Link style={{ textDecoration: 'none' }} to={text.toLowerCase() === 'home' ? '/' : '/' + text.toLowerCase()} >
               <ListItemText primary={text} />
               <Divider style={{ width: '100vw', border: '1px solid white', backgroundColor: 'white' }} />
             </Link>

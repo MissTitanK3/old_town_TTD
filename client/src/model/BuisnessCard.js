@@ -158,6 +158,39 @@ export default function BuisnessCard() {
           }
         </div>
         <div>
+          {currentData?.acf.vimeo ?
+            <a href={currentData?.acf.vimeo}
+              target="_blank"
+              rel='noreferrer' >
+              <img src={TWIT} alt="" />
+              <span>Vimeo</span>
+            </a>
+            : null
+          }
+        </div>
+        <div>
+          {currentData?.acf.yelp ?
+            <a href={currentData?.acf.yelp}
+              target="_blank"
+              rel='noreferrer' >
+              <img src={TWIT} alt="" />
+              <span>Yelp</span>
+            </a>
+            : null
+          }
+        </div>
+        <div>
+          {currentData?.acf.linkedin ?
+            <a href={currentData?.acf.linkedin}
+              target="_blank"
+              rel='noreferrer' >
+              <img src={TWIT} alt="" />
+              <span>LinkedIn</span>
+            </a>
+            : null
+          }
+        </div>
+        <div>
           {currentData?.acf.website ?
             <a href={currentData?.acf.website}
               target="_blank"

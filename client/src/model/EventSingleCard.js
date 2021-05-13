@@ -5,7 +5,6 @@ import { Link, useParams } from 'react-router-dom'
 import { EventSingleCardWrapper } from '../style/Wrapper'
 import { EventBtn, EventDesc, EventDetailHeader, EventDetailPage, EventTitleCard, PageBreakAlt } from '../style/Components'
 import PageBreakOne from '../asset/img/page_break_one.png'
-import { height } from '@material-ui/system'
 
 export default function EventSingleCard() {
   const { id } = useParams()

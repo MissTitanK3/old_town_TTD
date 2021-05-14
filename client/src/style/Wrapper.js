@@ -718,6 +718,10 @@ hr {
 export const CalendarWrapper = styled.div`
 display: flex;
 width: 400px;
+/* TODO swap later */
+@media only screen and (max-width: 884px) {
+  width: 100%;
+}
 `
 
 export const EventsDetailsWrap = styled.div`

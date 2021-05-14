@@ -11,6 +11,7 @@ import PiannoGirl from '../asset/img/pianno_girl.png'
 // Stylesheet
 import { Discover, PageBreakAlt } from '../style/Components'
 import EventsCard from '../controller/EventsCard'
+import AltEventsCard from '../controller/AltEventsCard'
 import { EventsCardWrapper, FECardWrapper } from '../style/Wrapper'
 import FECard from '../model/FECard'
 import { useQuery } from 'react-query'
@@ -40,7 +41,7 @@ export default function Events() {
       <EctTitleCard name='Events' styles='aTeal' />
       <Discover>Heading to Olde Town? We want to make sure you're in the loop! Check out our Events Calendar to see all that is happening!</Discover>
       <EventsCardWrapper>
-        <EventsCard
+        <AltEventsCard
           accent='aLime'
           border='bBlue'
           img={PiannoGirl}
@@ -59,7 +60,7 @@ export default function Events() {
           title='SUBMIT AN EVENT'
           desc="Planning an event in Olde Town? Tell us the details and we’ll get your event added to the community calendar!"
           btn='SUBMIT AN EVENT'
-          dest='/events-calendar'
+          link='http://eepurl.com/hyxqpX'
         />
         <hr />
         <EventsCard
@@ -70,7 +71,7 @@ export default function Events() {
           title='VOLUNTEER'
           desc="Want to lend a hand? Click here to fill out the colunteer form!"
           btn='GO TO FORM'
-          dest='/events-calendar'
+          link='http://eepurl.com/hyxqkH'
         />
         <hr />
         <EventsCard
@@ -81,7 +82,7 @@ export default function Events() {
           title='VENDOR REGISTRATION'
           desc="Interested in receiving info about vending at an Olde Town event? Click here to be added to our vendor email list!"
           btn='GO TO FORM'
-          dest='/events-calendar'
+          link='http://eepurl.com/gPsSR9'
         />
       </EventsCardWrapper>
       <FECardWrapper>

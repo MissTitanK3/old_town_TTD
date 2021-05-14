@@ -22,12 +22,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* @media only screen and (min-width: 884px) {
+@media only screen and (max-width: 884px) {
   .react-calendar {
     width: 250px;
-    font-size: 1rem;
+    font-size: 16px !important;
   }
-} */
+  .react-calendar button {
+    font-size: 18px !important;
+  }
+}
 
 .react-calendar {
   width: 350px;

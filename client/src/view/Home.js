@@ -38,7 +38,7 @@ export default function Home() {
 					Olde Town!
 				</p>
 			</StandDesc>
-			<div style={{height:'800px'}} >
+			<div style={{ height: '800px' }} >
 				<CardBar />
 				<AbsCardWrap>
 					<AbstractCard
@@ -85,7 +85,7 @@ export default function Home() {
 					</div>
 				</Link> */}
 			</WhatsNewWrapper>
-				<OldeCarousel/>
+			<OldeCarousel />
 			<LongWrapper>
 				<LongCard
 					img={OutsideArea}
@@ -112,7 +112,6 @@ export default function Home() {
 					mid='midAqua'
 				/>
 			</LongWrapper>
-			'{/* TODO add instafeed */}
 		</div>
 	);
 }

@@ -82,7 +82,11 @@ div {
 width: 80vw;
 padding: 10px 0;
 h2 {
-  font-size: 80px;
+  font-size: 100px;
+  margin: 120px 0 0 0;
+}
+p {
+  font-size: 45px;
 }
 }
 `
@@ -291,23 +295,23 @@ span {
 .aRed {
   background-color: #313A64;
   height: 100%;
-  width: 60%;
+  width: 80%;
   margin: auto;
   clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 83%, 95% 83%);
   position: absolute;
   top: 5px;
-  left: 205px;
+  /* left: 205px; */
   z-index: -20;
 }
 .aBlue {
   background-color: #313A64;
   height: 100%;
-  width: 60%;
+  width: 80%;
   margin: auto;
   clip-path: polygon(95% 25%, 100% 25%, 100% 100%, 20% 100%, 20% 87%, 95% 87%);
   position: absolute;
   top: 5px;
-  left: 205px;
+  /* left: 205px; */
   z-index: -20;
 }
 }
@@ -503,7 +507,7 @@ img {
 .aBlue {
   background-color: #313A64;
   height: 58%;
-  width: 50%;
+  width: 80%;
   clip-path: polygon(7% 0, 7% 95%, 100% 95%, 100% 100%, 0 100%, 0 0);
   position: relative;
   top: -235px;
@@ -513,7 +517,7 @@ img {
 .aRed {
   background-color: #F40707;
   height: 58%;
-  width: 50%;
+  width: 80%;
   clip-path: polygon(7% 0, 7% 95%, 100% 95%, 100% 100%, 0 100%, 0 0);
   position: relative;
   top: -235px;
@@ -523,7 +527,7 @@ img {
 .aGreen {
   background-color: #048A81;
   height: 58%;
-  width: 50%;
+  width: 80%;
   clip-path: polygon(7% 0, 7% 95%, 100% 95%, 100% 100%, 0 100%, 0 0);
   position: relative;
   top: -235px;
@@ -718,6 +722,10 @@ hr {
 export const CalendarWrapper = styled.div`
 display: flex;
 width: 400px;
+/* TODO swap later */
+@media only screen and (max-width: 884px) {
+  width: 100%;
+}
 `
 
 export const EventsDetailsWrap = styled.div`
@@ -849,7 +857,7 @@ align-items: center;
   padding: 25px 0;
   div {
     width: 100%;
-    height: 400px;
+    height: 100vh;
   }
 }
 `

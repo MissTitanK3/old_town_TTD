@@ -29,7 +29,7 @@ ul {
   list-style: none;
   li {
     padding: 0 25px;
-    font-size: 1.5em;
+    font-size: 2.5em;
     a {
       text-decoration: none;
       color: #333333
@@ -42,9 +42,9 @@ ul {
 `
 
 export const StandardBtn = styled.div`
-  height: 25px;
-  width: 250px;
-  font-size: 16px;
+  height: 65px;
+  width: 350px;
+  font-size: 45px;
   border: none;
   display: flex;
   justify-content: center;
@@ -205,6 +205,7 @@ div {
   img {
     opacity: .7;
     width: 100vw;
+    height: 600px;
   }
   h2 {
     display: flex;
@@ -358,8 +359,9 @@ img {
   display: initial;
   width: 80%;
   box-shadow: 2px 2px 5px black;
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
+  margin-top: 25px;
   :hover{
     background-color: silver;
     cursor: pointer;
@@ -369,10 +371,11 @@ img {
 `
 export const CardBtn = styled.div`
 display: flex;
+font-weight: 900;
 justify-content: center;
 align-items: center;
 height: 85px;
-width: 250px;
+width: 350px;
 background-color: #378CAB;
 :hover{
   color: white;
@@ -1222,6 +1225,7 @@ export const AboutIntro = styled.div`
     font-size: 55px;
     width: 70%;
     padding: 100px 0;
+    line-height: 1.5;
 }
 `
 
@@ -1315,7 +1319,18 @@ img {
 
 export const AboutPositions = styled.div`
 font-weight: bolder;
-font-size: 20px;
+font-size: 25px;
+width: 200px;
+height: 325px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+img {
+  width: 100%;
+  padding-bottom: 3px;
+  border-radius:50%;
+}
 p {
   display: flex;
   flex-direction: column;
@@ -1328,23 +1343,26 @@ p {
   width: 200px;
   padding: 0;
   margin: 5px;
+  font-size: 35px;
 }
 span {
   background-color: none;
   display: flex;
   justify-content: center;
-  
 }
 @media only screen and (min-width: 884px) {
   margin: 20px;
   p {
+  text-align: center;
   height: 75px;
   width: 180px;
-  margin: 0;
+  margin: 10px;
+  padding: 15px;
 }
 span {
   height: 75px;
   width: 180px;
+  margin: auto;
 }
 }
 `
@@ -1363,7 +1381,7 @@ display: flex;
 justify-content: center;
 flex-wrap: wrap;
 align-items: center;
-max-width: 660px;
+max-width: 800px;
 }
 `
 
@@ -1386,7 +1404,7 @@ export const AboutHeaderTitle = styled.div`
 `
 
 export const AboutInvolvedApply = styled.div`
-  text-align: center;
+text-align: center;
 h3, span, p {
   padding-left: 10px;
 }
@@ -1404,6 +1422,11 @@ ul {
   text-align: left;
 }
 @media only screen and (min-width: 884px) {
+div > a {
+  font-size: 45px;
+  display: flex;
+  padding-left: 200px;
+}
 h3 {
   width: 60%;
   font-size: 55px;
@@ -1430,6 +1453,7 @@ ul{
 `
 
 export const AboutDocuments = styled.div`
+
 div {
   padding: 15px 0;
   display: flex;
@@ -1445,14 +1469,18 @@ div {
 .committee {
   background-color: #3C498170;
 }
+details {
+  display: flex;
+  flex-direction: column;
+}
 h3, a{
   padding-left: 15px;
 }
 @media only screen and (min-width: 884px) {
-  h3, a{
-    padding-left: 25px;
-  }
-  div {
+h3, a{
+  padding-left: 25px;
+}
+div {
 display: flex;
 flex-direction: column;
 width: unset;

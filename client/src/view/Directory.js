@@ -73,6 +73,7 @@ export default function Directory() {
           </strong>
           <br />
           <br />
+          <br />
         </Link >
       ))
       return values
@@ -108,14 +109,14 @@ export default function Directory() {
           <img src={PageBreakOne} alt="Page Break" />
         </PageBreakAlt>
         <AltTitleCard name='Directory' styles='aBlue' />
-        <Discover>Get to Know the Neighborhood</Discover>
+        {/* <Discover>Get to Know the Neighborhood</Discover> */}
       </div>
       <FilterWrapper>
         <FilterCard onClick={() => setFiltered('food')} >
           <img src={OTLogo} alt="" />
           <CardBtn>
             <div className='dBlue'>
-              Food & Drink
+              FOOD & DRINK
             </div>
           </CardBtn>
         </FilterCard>
@@ -123,7 +124,7 @@ export default function Directory() {
           <img src={OTLogo} alt="" />
           <CardBtn>
             <div className='dTan'>
-              Beauty & Wellness
+              BEAUTY & WELLNESS
             </div>
           </CardBtn>
         </FilterCard>
@@ -131,7 +132,7 @@ export default function Directory() {
           <img src={OTLogo} alt="" />
           <CardBtn>
             <div className='dGreen'>
-              Retail
+              RETAIL
             </div>
           </CardBtn>
         </FilterCard>
@@ -139,7 +140,7 @@ export default function Directory() {
           <img src={OTLogo} alt="" />
           <CardBtn>
             <div className='dRed'>
-              Services
+              SERVICES
             </div>
           </CardBtn>
         </FilterCard>
@@ -147,7 +148,7 @@ export default function Directory() {
           <img src={OTLogo} alt="" />
           <CardBtn>
             <div className="dPurple">
-              Organization
+              ORGANIZATIONS
             </div>
           </CardBtn>
         </FilterCard>
@@ -155,7 +156,7 @@ export default function Directory() {
           <img src={OTLogo} alt="" />
           <CardBtn>
             <div className="dOrange">
-              Parking
+              PARKING
             </div>
           </CardBtn>
         </FilterCard>

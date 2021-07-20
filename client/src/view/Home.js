@@ -6,6 +6,7 @@ import { AbsCardWrap, LongWrapper, WhatsNewWrapper } from '../style/Wrapper';
 import chalkboard from '../asset/img/chalkboard.png';
 import PageBreakOne from '../asset/img/page_break_one.png';
 import OutsideArea from '../asset/img/outside_sitting.png';
+import PiannoGirl from '../asset/img/girl_boy_bar.png';
 import LongCard from '../model/LongCard';
 // import { Link } from 'react-router-dom';
 import OldeCarousel from '../controller/Carousel';
@@ -38,7 +39,7 @@ export default function Home() {
 					Olde Town!
 				</p>
 			</StandDesc>
-			<div style={{height:'800px'}} >
+			<div style={{ height: '800px' }} >
 				<CardBar />
 				<AbsCardWrap>
 					<AbstractCard
@@ -51,7 +52,7 @@ export default function Home() {
 						path='/news'
 					/>
 					<AbstractCard
-						img={chalkboard}
+						img={PiannoGirl}
 						alt='Chalboard Storefront'
 						bColor='moa'
 						aColor='aRed'
@@ -60,7 +61,7 @@ export default function Home() {
 						path='/directory'
 					/>
 					<AbstractCard
-						img={chalkboard}
+						img={OutsideArea}
 						alt='Chalboard Storefront'
 						bColor='lime'
 						aColor='aGreen'
@@ -85,10 +86,10 @@ export default function Home() {
 					</div>
 				</Link> */}
 			</WhatsNewWrapper>
-				<OldeCarousel/>
+			<OldeCarousel />
 			<LongWrapper>
 				<LongCard
-					img={OutsideArea}
+					img='https://oldetownarvada.org/wp-content/uploads/2021/03/Shop-Hero-Image-for-Homepage.jpg'
 					alt='Outside sitting area'
 					labeled='SHOP'
 					details="Olde Town offeres one of the Colorado's most unique shopping experiences!"
@@ -96,7 +97,7 @@ export default function Home() {
 					mid='midOrange'
 				/>
 				<LongCard
-					img={OutsideArea}
+					img='https://oldetownarvada.org/wp-content/uploads/2021/03/Hero-Image-for-Dine-on-Homepage-scaled.jpg'
 					alt='Outside sitting area'
 					labeled='DINE'
 					details="Olde Town is home to award winning restaurants, breweries, cafes and more!"
@@ -104,7 +105,7 @@ export default function Home() {
 					mid='midBlue'
 				/>
 				<LongCard
-					img={OutsideArea}
+					img='https://oldetownarvada.org/wp-content/uploads/2021/03/IMG-0153.jpg'
 					alt='Outside sitting area'
 					labeled='MORE'
 					details="From massages to fitness to your favorite salon, see everything Olde Town has to offer"
@@ -112,7 +113,6 @@ export default function Home() {
 					mid='midAqua'
 				/>
 			</LongWrapper>
-			'{/* TODO add instafeed */}
 		</div>
 	);
 }

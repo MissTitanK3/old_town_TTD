@@ -43,7 +43,6 @@ export default function OldeCalendar() {
       </div>
       <EventsCalWrapper>
         <CalendarWrapper>
-          {/* TODO talk to Mx about responsive cal @280px */}
           <Calendar
             className='calendar'
             onChange={onChange}

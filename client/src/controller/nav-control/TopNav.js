@@ -7,7 +7,7 @@ import { LogoWrap, MobileWrap, TopNavWrap } from '../../style/Wrapper'
 
 // Assets
 import LogoImg from '../../asset/img/OTLogo.png'
-import Search from '../Search'
+// import Search from '../Search'
 import DrawerNav from '../DrawerNav'
 
 export default function TopNav() {
@@ -23,7 +23,7 @@ export default function TopNav() {
         <NavList>
           <div>
             {/* TODO Add box shadow */}
-            <Search />
+            {/* <Search /> */}
           </div>
           <ul>
             <li>
@@ -46,11 +46,11 @@ export default function TopNav() {
                 News
               </Link>
             </li>
-            {/* <li>
-              <Link to='/contact'>
-                Contact Us
+            <li>
+              <Link to={{ pathname: 'https://olde-town-arvada-business-improvement-district.myshopify.com/collections/all' }} target='_blank'>
+                Store
               </Link>
-            </li> */}
+            </li>
           </ul>
           <div>
           </div>

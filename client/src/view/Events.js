@@ -55,7 +55,7 @@ export default function Events() {
         <EventsCard
           accent='aBlue'
           border='bOr'
-          img={PiannoGirl}
+          img='https://oldetownarvada.org/wp-content/uploads/2021/03/Submit-an-Event.jpg'
           alt='Pianno Girl'
           title='SUBMIT AN EVENT'
           desc="Planning an event in Olde Town? Tell us the details and we’ll get your event added to the community calendar!"

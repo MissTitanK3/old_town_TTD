@@ -8,7 +8,7 @@ import { AboutDetailsWrapper, AboutPositionsWrapper } from '../style/Wrapper'
 import { AboutImg, AboutIntro, AboutPositions, AboutSeatPositions, AltAboutSeatPositions, AboutTitle, AboutTxtBody, TintRed, AboutHeaderTitle, AboutInvolvedApply, AboutDocuments } from '../style/Components'
 
 export default function About() {
-  const infoLink = <Link to='/'>info@oldetownarvada.org</Link>
+
   return (
     <AboutWrapper>
       <AboutImg>
@@ -39,11 +39,11 @@ export default function About() {
           </div>
         </AboutTxtBody>
       </AboutDetailsWrapper>
-      <TintRed>
+      {/* <TintRed>
         <div className="img">
           <img src={TwoPeoplePatio} alt="" />
         </div>
-      </TintRed>
+      </TintRed> */}
       <AboutBoardWrapper>
         <div className="board">
           <AboutImg>
@@ -58,40 +58,59 @@ export default function About() {
           <AboutPositionsWrapper>
             <AboutSeatPositions>
               <AboutPositions>
-                <p>Deborah <br /> Pearson</p>
-                <span>President</span>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2021/03/Deb-Pearson.jpg" alt="" />
+                <div>
+                  <p>Deborah <br /> Pearson</p>
+                  <span>President</span>
+                </div>
               </AboutPositions>
               <AboutPositions>
-                <p>Scott <br /> Spears</p>
-                <span>Vice President</span>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2021/03/scott_spears_olde_town_arvada_cover-scaled.jpg" alt="" />
+                {/* <img src="https://oldetownarvada.org/wp-content/uploads/2020/11/Box-Color.png" alt="" /> */}
+                <div>
+                  <p>Scott <br /> Spears</p>
+                  <span>Vice President</span>
+                </div>
               </AboutPositions>
               <AboutPositions>
-                <p>Lori <br /> Drinka</p>
-                <span>Secretary</span>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2020/11/Box-Color.png" alt="" />
+                <div>
+                  <p>Lori <br /> Drinka</p>
+                  <span>Secretary</span>
+                </div>
               </AboutPositions>
               <AboutPositions>
-                <p>Lisa <br /> Reich</p>
-                <span>Tresurer</span>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2021/03/Lisa.jpg" alt="" />
+                <div>
+                  <p>Lisa <br /> Reich</p>
+                  <span>Treasurer</span>
+                </div>
               </AboutPositions>
             </AboutSeatPositions>
             <AltAboutSeatPositions >
               <AboutPositions>
-                <p>Charlie <br /> Berger</p>
-              </AboutPositions>
-              <AboutPositions>
-                <p>Brandon <br /> Capps</p>
-              </AboutPositions>
-              <AboutPositions>
-                <p>Peter <br /> Kazura</p>
-              </AboutPositions>
-              <AboutPositions>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2021/03/Casey.jpg" alt="" />
                 <p>Casey <br /> Adler</p>
               </AboutPositions>
               <AboutPositions>
-                <p>Debbie <br /> Hansen</p>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2021/03/Jamie.jpg" alt="" />
+                <p>Jamie <br /> Hollier</p>
               </AboutPositions>
               <AboutPositions>
-                <p>Jamie <br /> Hollier</p>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2021/03/Pete.jpg" alt="" />
+                <p>Peter <br /> Kazura</p>
+              </AboutPositions>
+              <AboutPositions>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2020/11/Box-Color.png" alt="" />
+                <p>Charlie <br /> Berger</p>
+              </AboutPositions>
+              <AboutPositions>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2020/11/Box-Color.png" alt="" />
+                <p>Brandon <br /> Capps</p>
+              </AboutPositions>
+              <AboutPositions>
+                <img src="https://oldetownarvada.org/wp-content/uploads/2020/11/Box-Color.png" alt="" />
+                <p>Debbie <br /> Hansen</p>
               </AboutPositions>
             </AltAboutSeatPositions>
           </AboutPositionsWrapper>
@@ -112,17 +131,16 @@ export default function About() {
           <div className="links">
             <div className="eapp">
               <span>
-                <Link to='/'>Complete the Electronic Application</Link>
+                <Link onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdl-k-uD1Q1xpwWrguZi5XrqUxP1ytaNwuVWJ053lJb_0FnAw/viewform', '_blank')} to='#'>Complete the Electronic Application</Link>
               </span>
               <br />
               <span>
-                <Link to='/'>Download the Application as a PDF</Link>
+                <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2021/02/BID-Board-Leadership-Info-and-Application.docx.pdf', '_blank')} to='#'>Download the Application as a PDF</Link>
               </span>
             </div>
-            <div className="download">
-            </div>
             <div className="email">
-              <p>-Email your completed form to &nbsp;{infoLink} </p>
+              <p>-Email your completed form to:</p>
+              <a href='mailto:info@oldetownarvada.org' target='_blank' rel='noreferrer'>info@oldetownarvada.org</a>
             </div>
           </div>
         </AboutInvolvedApply>
@@ -140,7 +158,7 @@ export default function About() {
             <p>
               If you are interested in joining a subcommittee, please send us an email:
             </p>
-            <span>{infoLink}</span>
+            <a href='mailto:info@oldetownarvada.org' target='_blank' rel='noreferrer'>info@oldetownarvada.org</a>
           </div>
         </AboutInvolvedApply>
         <AboutInvolvedApply>
@@ -149,7 +167,7 @@ export default function About() {
             <p>
               If you are interested in joining a subcommittee, please send us an email:
             </p>
-            <span>{infoLink}</span>
+            <a href='mailto:info@oldetownarvada.org' target='_blank' rel='noreferrer'>info@oldetownarvada.org</a>
           </div>
         </AboutInvolvedApply>
       </AboutInvolvedWrapper>
@@ -157,10 +175,30 @@ export default function About() {
         <AboutDocuments>
           <div className="budget">
             <h3>Budget & Operating Plans:</h3>
-            <Link to='/'>2021 Planning Documents</Link>
-            <Link to='/'>2020 Planning Documents</Link>
-            <Link to='/'>2019 Planning Documents</Link>
-            <Link to='/'>2018 Planning Documents</Link>
+            {/* <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2021/02/BID-Board-Leadership-Info-and-Application.docx.pdf', '_blank')} to='#'>Download the Application as a PDF</Link> */}
+            <details>
+              <summary>2021</summary>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2020/10/2021-Operating-Plan.pdf', '_blank')} to='#'>2021 Operating Plan</Link>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2020/12/2021-Budget-Final.pdf', '_blank')} to='#'>2021 Budget</Link>
+              <details>
+                <summary>one level deep</summary>
+              </details>
+            </details>
+            <details>
+              <summary>2020</summary>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2020/02/2020-Operating-Plan.pdf', '_blank')} to='#'>2020 Operating Plan</Link>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2020/02/2020-Budget.pdf', '_blank')} to='#'>2020 Budget</Link>
+            </details>
+            <details>
+              <summary>2019</summary>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2018/10/2019-Operating-Plan-Olde-Town-Arvada-BID.pdf', '_blank')} to='#'>2019 Operating Plan</Link>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2019/01/2019-Budget-Final.pdf', '_blank')} to='#'>2019 Budget</Link>
+            </details>
+            <details>
+              <summary>2018</summary>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2016/09/Olde-Town-BID-Operating-Plan-2018.pdf', '_blank')} to='#'>2018 Operating Plan</Link>
+              <Link onClick={() => window.open('https://oldetownarvada.org/wp-content/uploads/2016/09/2018-website-Budget.pdf', '_blank')} to='#'>2018 Budget</Link>
+            </details>
           </div>
         </AboutDocuments>
         <AboutDocuments>

@@ -35,12 +35,12 @@ code {
 .react-calendar {
   width: 350px;
   max-width: 100%;
-  background: none;
+  background: none !important;
   border: 1px solid #a0a096;
   font-family: 'Neutraface Light', sans-serif;
   font-size: 1.25rem;
   line-height: 1.125em;
-  border: none;
+  border: none !important;
   height: 420px;
   max-height: 100%;
 }
@@ -53,6 +53,7 @@ code {
 }
 .react-calendar button:hover {
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.5) !important;
 }
 .react-calendar__tile--active {
   color: white;

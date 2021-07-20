@@ -12,6 +12,7 @@ import ANCHOR from '../asset/img/anchorfm.png'
 import INSTA from '../asset/img/insta.png'
 import TWIT from '../asset/img/twitter.png'
 import YT from '../asset/img/youtube.png'
+import GLOBE from '../asset/img/globe-logo.png'
 // import PINS from '../asset/img/pinterest.png'
 import DefaultImg from '../asset/img/OTLogo.png'
 import PageBreakOne from '../asset/img/page_break_one.png'
@@ -129,7 +130,7 @@ export default function BuisnessCard() {
             <a href={currentData?.acf.pinterest}
               target="_blank"
               rel='noreferrer' >
-              <img src={FB} alt="" />
+              <img src={GLOBE} alt="" />
               <span>PINTEREST</span>
             </a>
             : null
@@ -162,7 +163,7 @@ export default function BuisnessCard() {
             <a href={currentData?.acf.vimeo}
               target="_blank"
               rel='noreferrer' >
-              <img src={TWIT} alt="" />
+              <img src={GLOBE} alt="" />
               <span>Vimeo</span>
             </a>
             : null
@@ -173,7 +174,7 @@ export default function BuisnessCard() {
             <a href={currentData?.acf.yelp}
               target="_blank"
               rel='noreferrer' >
-              <img src={TWIT} alt="" />
+              <img src={GLOBE} alt="" />
               <span>Yelp</span>
             </a>
             : null
@@ -184,7 +185,7 @@ export default function BuisnessCard() {
             <a href={currentData?.acf.linkedin}
               target="_blank"
               rel='noreferrer' >
-              <img src={TWIT} alt="" />
+              <img src={GLOBE} alt="" />
               <span>LinkedIn</span>
             </a>
             : null
@@ -195,7 +196,7 @@ export default function BuisnessCard() {
             <a href={currentData?.acf.website}
               target="_blank"
               rel='noreferrer' >
-              <img src={FB} alt="" />
+              <img src={GLOBE} alt="" />
               <span>WEBSITE</span>
             </a>
             : null

@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import TavernPatio from '../asset/img/tavern_patio.png'
 import WaterTower from '../asset/img/water_tower.png'
-import TwoPeoplePatio from '../asset/img/two_people_patio.png'
 import { AboutBoardWrapper, AboutWrapper, AboutInvolvedWrapper, AboutDocWrapper } from '../style/Wrapper'
 import { AboutDetailsWrapper, AboutPositionsWrapper } from '../style/Wrapper'
-import { AboutImg, AboutIntro, AboutPositions, AboutSeatPositions, AltAboutSeatPositions, AboutTitle, AboutTxtBody, TintRed, AboutHeaderTitle, AboutInvolvedApply, AboutDocuments } from '../style/Components'
+import { AboutImg, AboutIntro, AboutPositions, AboutSeatPositions, AltAboutSeatPositions, AboutTitle, AboutTxtBody, AboutHeaderTitle, AboutInvolvedApply, AboutDocuments } from '../style/Components'
 
 export default function About() {
 
@@ -39,11 +38,6 @@ export default function About() {
           </div>
         </AboutTxtBody>
       </AboutDetailsWrapper>
-      {/* <TintRed>
-        <div className="img">
-          <img src={TwoPeoplePatio} alt="" />
-        </div>
-      </TintRed> */}
       <AboutBoardWrapper>
         <div className="board">
           <AboutImg>

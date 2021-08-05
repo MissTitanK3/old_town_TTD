@@ -8,7 +8,7 @@ import { useWPDataStore } from '../api/store'
 import MapBox from '../api/MapBox';
 
 // Stylesheets
-import { FilterCard, CardBtn, Results, PageBreakAlt, Discover } from '../style/Components';
+import { FilterCard, CardBtn, Results, PageBreakAlt } from '../style/Components';
 import { FilterWrapper, MapWrap } from '../style/Wrapper';
 
 // Assets
